@@ -1,0 +1,23 @@
+set nocp
+set nu!
+set filetype=c
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set cindent
+colorscheme elflord
+syntax on
+set backspace=indent,eol,start
+set cin
+set sm
+set ai
+set backup
+set undofile
+
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+set fileencoding=chinese
+else
+set fileencoding=utf-8
+endif
