@@ -13,7 +13,11 @@ int main() {
     //ja-jp
     //char str[41][100] = { "","mso:music.track","mso:music.composition","mso:music.album","mso:event.agent","mso:media_common.creative_work","mso:media_common.cataloged_instance","mso:book.written_work","mso:music.artist","mso:music.single","mso:ratings.rated_entity","mso:book.book","mso:book.edition","mso:people.person","mso:organization.organization","mso:business.operation","mso:media_common.subject","mso:music.record_label","mso:biology.organism","mso:book.author","mso:location.location","mso:film.actor","mso:location.administrative_division" };
     //with localdata
-    char str[41][100] = {"","mso:music.track","mso:music.composition","mso:ratings.rated_entity","mso:local.entity","mso:music.album","mso:event.agent","mso:media_common.creative_work","mso:media_common.cataloged_instance","mso:book.written_work","mso:music.artist","mso:music.single","mso:book.book","mso:book.edition","mso:local.restaurant","mso:people.person","mso:organization.organization","mso:business.operation","mso:media_common.subject","mso:music.record_label","mso:biology.organism","mso:book.author","mso:location.location"};
+    //char str[41][100] = {"","mso:music.track","mso:music.composition","mso:ratings.rated_entity","mso:local.entity","mso:music.album","mso:event.agent","mso:media_common.creative_work","mso:media_common.cataloged_instance","mso:book.written_work","mso:music.artist","mso:music.single","mso:book.book","mso:book.edition","mso:local.restaurant","mso:people.person","mso:organization.organization","mso:business.operation","mso:media_common.subject","mso:music.record_label","mso:biology.organism","mso:book.author","mso:location.location"};
+
+    //en-us
+    char str[41][100] = {"","mso:event.agent","mso:people.person","mso:biology.organism","mso:internet.social_network_user","mso:media_common.cataloged_instance","mso:location.location","mso:architecture.structure","mso:projects.project_focus","mso:location.residential_structure","mso:real_estate.house","mso:ratings.rated_entity","mso:media_common.creative_work","mso:award.ranked_item","mso:book.edition","mso:book.author","mso:music.release_track","mso:book.written_work","mso:organization.organization","mso:business.employer","mso:music.track","mso:education.educational_institution","mso:book.book"};
+
     puts("//////////////////////////////////////////////////");
     puts("#DECLARE rank string;");
     puts("#DECLARE category string;");
@@ -32,6 +36,7 @@ int main() {
         printf("#SET t_n_o_path = @folder + \"category_name/\"+@rank+\"_\"+@category_p+\".ss\";\n");
         puts("t_n_o = SELECT _SType,");
         puts("       _Name,");
+        puts("       _Facet,");
         puts("       _SubjectKey");
         puts("FROM _TNO");
         puts("WHERE _SType == @category;");
@@ -45,15 +50,26 @@ int main() {
     }
     puts("//////////////////////////////////////////////////");
     printf("#SET t_n_o_path = @folder + \"category_name/others.ss\";\n");
-    puts("t_n_o = SELECT _SType,");
+    puts("_a = SELECT _SType,");
     puts("       _Name,");
+    puts("       _Facet,");
+    puts("       _FacetNum,");
     puts("       _SubjectKey");
     puts("FROM _TNO");
-    printf("WHERE _SType != \"%s\"",str[1]);
+    printf("WHERE _SType == \"%s\"",str[1]);
     for (int i=2; i<=20; i++) {
-        printf(" AND _SType != \"%s\"",str[i]);
+        printf(" OR _SType == \"%s\"",str[i]);
     }
     printf(";\n");
+    puts("");
+    puts("_b = SELECT _SType,");
+    puts("       _Name,");
+    puts("       _Facet,");
+    puts("       _FacetNum,");
+    puts("       _SubjectKey");
+    puts("FROM _TNO;");
+    puts("");
+    puts("t_n_o = SELECT _SType,_Name,_Facet,_FacetNum,_SubjectKey FROM _b LEFT OUTER JOIN _a ON _b._SubjectKey == _a._SubjectKey WHERE _a._SubjectKey == null;");
     puts("");
     puts("OUTPUT t_n_o");
     puts("TO SSTREAM @t_n_o_path");
@@ -61,7 +77,8 @@ int main() {
     puts("SORTED BY _Name;");
     puts("");
     puts("#DECLARE cnt_o_p string = @folder+\"category_name/\"+\"others-cnt.out\";");
-    puts("cnt_o = SELECT COUNT(DISTINCT _SubjectKey) AS count FROM t_n_o;");
+    puts("t_n_o_c = SELECT DISTINCT _SubjectKey,_FacetNum FROM t_n_o;");
+    puts("cnt_o = SELECT COUNT(DISTINCT _SubjectKey) AS count,Math.Round(1.0*SUM(t_n_o_c._FacetNum)/COUNT(DISTINCT _SubjectKey)) AS rate FROM t_n_o_c;");
     puts("OUTPUT cnt_o");
     puts("TO @cnt_o_p");
     puts("USING DefaultTextOutputter();");
