@@ -1,0 +1,35 @@
+*** Starting uWSGI 2.0.11.1 (32bit) on [Sun Sep 27 07:32:15 2015] ***
+compiled with version: 5.2.0 on 09 August 2015 17:46:31
+os: Linux-4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 09:07:24 CEST 2015
+nodename: wFalcon
+machine: i686
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/bdep__/code/acmt/www
+detected binary path: /usr/bin/uwsgi
+your processes number limit is 16120
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8899 fd 3
+Python version: 3.4.3 (default, Mar 26 2015, 07:36:01)  [GCC 4.9.2 20150304 (prerelease)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x88ef288
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 127976 bytes (124 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/bdep__/code/acmt/www//luffa/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x88ef288 pid: 7215 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7215)
+spawned uWSGI worker 1 (pid: 7216, cores: 1)
+[pid: 7216|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 685 bytes} [Sat Sep 26 23:32:32 2015] GET /showtime/ => generated 10553 bytes in 756 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 7216|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 630 bytes} [Sat Sep 26 23:32:35 2015] GET /favicon.ico => generated 2603 bytes in 48 msecs (HTTP/1.1 404) 3 headers in 94 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+Sat Sep 26 23:32:50 2015 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
