@@ -2865,3 +2865,37 @@ lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
 probably another instance of uWSGI is running on the same address (127.0.0.1:8899).
 bind(): Address already in use [core/socket.c line 764]
+*** Starting uWSGI 2.0.11.1 (32bit) on [Sun Sep 27 18:48:41 2015] ***
+compiled with version: 5.2.0 on 09 August 2015 17:46:31
+os: Linux-4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 09:07:24 CEST 2015
+nodename: wFalcon
+machine: i686
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/bdep__/code/acmt/www
+detected binary path: /usr/bin/uwsgi
+your processes number limit is 16120
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8899).
+bind(): Address already in use [core/socket.c line 764]
+*** Starting uWSGI 2.0.11.1 (32bit) on [Sun Sep 27 18:51:29 2015] ***
+compiled with version: 5.2.0 on 09 August 2015 17:46:31
+os: Linux-4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 09:07:24 CEST 2015
+nodename: wFalcon
+machine: i686
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/bdep__/code/acmt/www
+detected binary path: /usr/bin/uwsgi
+your processes number limit is 16120
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8899).
+bind(): Address already in use [core/socket.c line 764]

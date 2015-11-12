@@ -19,7 +19,7 @@ def get_stock_data(code):
     return price
 
 def get_code():
-    file_name = 'concern.in'
+    file_name = 'in'
     f = open(file_name)
     codes = f.read()
     code = codes.rstrip('\n').split('\n')
