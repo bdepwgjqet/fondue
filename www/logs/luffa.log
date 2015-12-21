@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *** Starting uWSGI 2.0.11.1 (32bit) on [Sun Sep 27 07:32:15 2015] ***
 compiled with version: 5.2.0 on 09 August 2015 17:46:31
 os: Linux-4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 09:07:24 CEST 2015
@@ -2934,3 +2935,5 @@ SIGINT/SIGQUIT received...killing workers...
 Wed Nov 25 16:56:23 2015 - received message 0 from emperor
 worker 1 buried after 1 seconds
 goodbye to uWSGI.
+=======
+>>>>>>> 300b3c1c8590abc4d075e248cb5d660a6417952c
