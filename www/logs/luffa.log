@@ -2899,3 +2899,38 @@ lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
 probably another instance of uWSGI is running on the same address (127.0.0.1:8899).
 bind(): Address already in use [core/socket.c line 764]
+*** Starting uWSGI 2.0.11.1 (32bit) on [Wed Nov 25 15:50:43 2015] ***
+compiled with version: 5.2.0 on 09 August 2015 17:46:31
+os: Linux-4.1.6-1-ARCH #1 SMP PREEMPT Mon Aug 17 09:07:24 CEST 2015
+nodename: wFalcon
+machine: i686
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/bdep__/code/acmt/www
+detected binary path: /usr/bin/uwsgi
+your processes number limit is 16120
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8899 fd 3
+Python version: 3.4.3 (default, Mar 26 2015, 07:36:01)  [GCC 4.9.2 20150304 (prerelease)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x953c288
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 127976 bytes (124 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/bdep__/code/acmt/www//luffa/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x953c288 pid: 793 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 793)
+spawned uWSGI worker 1 (pid: 799, cores: 1)
+[pid: 799|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 667 bytes} [Wed Nov 25 08:01:13 2015] GET / => generated 3196 bytes in 632 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 799|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 621 bytes} [Wed Nov 25 08:01:15 2015] GET /favicon.ico => generated 2603 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 94 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+Wed Nov 25 16:56:23 2015 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
