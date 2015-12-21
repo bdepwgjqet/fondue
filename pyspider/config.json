@@ -1,0 +1,17 @@
+{
+    "taskdb": "mongodb+taskdb://spider:pntmdcg@127.0.0.1:27131/pyspider_taskdb",
+    "projectdb": "mongodb+projectdb://spider:pntmdcg@127.0.0.1:27131/pyspider_projectdb",
+    "resultdb": "mongodb+resultdb://spider:pntmdcg@127.0.0.1:27131/pyspider_resultdb",
+    "message_queue": "redis://127.0.0.1:6379/db",
+    "phantomjs-proxy": "127.0.0.1:25555",
+    "scheduler": {
+        "xmlrpc-host": "0,0,0,0",
+        "delete-time": 3600
+    },
+    "webui": {
+        "port": 5555,
+        "username": "spider",
+        "password": "pntmdcg",
+        "need-auth": true
+    }
+}

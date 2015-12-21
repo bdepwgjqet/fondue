@@ -1,10 +1,22 @@
+/*
+use admin;
 db.createUser(
   {
     user: "bdep",
     pwd: "pntmdcg",
-    roles: [ { role: "root", db: "admin" } ]
+    roles: [ 
+//        {
+//            role: "userAdminAnyDatabase",
+//            db: "admin"
+//        },
+        { 
+            role: "root", db: "admin" 
+        } 
+    ]
   }
 );
+*/
+db = db.getSiblingDB("pyspider_taskdb");
 db.createUser(
   {
     user: "spider",
@@ -12,20 +24,30 @@ db.createUser(
     roles: [ 
         {
             role: "readWrite",
-            db: "test"
-        },
-        {
-            role: "userAdminAnyDatabase",
-            db: "admin"
-        },
-        {
-            role: "readWrite",
             db: "pyspider_taskdb"
-        },
+        }
+    ]
+  }
+);
+db = db.getSiblingDB("pyspider_projectdb");
+db.createUser(
+  {
+    user: "spider",
+    pwd: "pntmdcg",
+    roles: [ 
         {
             role: "readWrite",
             db: "pyspider_projectdb"
-        },
+        }
+    ]
+  }
+);
+db = db.getSiblingDB("pyspider_resultdb");
+db.createUser(
+  {
+    user: "spider",
+    pwd: "pntmdcg",
+    roles: [ 
         {
             role: "readWrite",
             db: "pyspider_resultdb"
