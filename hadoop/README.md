@@ -1,1 +1,1 @@
-> Hadoop project src
+### code sample for hadoop

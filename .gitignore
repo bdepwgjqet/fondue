@@ -1,3 +1,6 @@
+*.pyc
 *.out
 *.in
+*.Bmp
+*.swp
 tags
