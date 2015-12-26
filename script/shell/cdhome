@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# usage source cdhome.sh
+# why source: the current process (shell) does this, not a new child process. 
+
+cd ~/ > /dev/null 2>&1

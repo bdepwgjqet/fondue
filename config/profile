@@ -1,0 +1,44 @@
+# /etc/profile
+
+#Set our umask
+umask 022
+
+# Set our default path
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin"
+export PATH
+
+# Load profiles from /etc/profile.d
+if test -d /etc/profile.d/; then
+	for profile in /etc/profile.d/*.sh; do
+		test -r "$profile" && . "$profile"
+	done
+	unset profile
+fi
+
+# Source global bash config
+if test "$PS1" && test "$BASH" && test -r /etc/bash.bashrc; then
+	. /etc/bash.bashrc
+fi
+
+# Termcap is outdated, old, and crusty, kill it.
+unset TERMCAP
+
+# Man is much better than us at figuring this out
+unset MANPATH
+
+#JDK
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
+
+#MAVEN
+export M2_HOME=/home/bdep__/software/apache-maven-3.2.3
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+export PATH=$PATH:$M2_HOME/bin
+
+#PS1
+export PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\[$(tput setaf 1)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 6)\]\t \[$(tput setaf 5)\]\W\[$(tput setaf 3)\]]\[$(tput setaf 7)\]\n\\$ \[$(tput sgr0)\]"
+
+# Self defined
+SDPATH="/home/bdep__/code/fondue/script/shell"
+export PATH=$PATH:$SDPATH
