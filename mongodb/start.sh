@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mongod --auth --port 27131 --dbpath /data/db
+mongod --journal --auth --port 27131 --dbpath /data/db
