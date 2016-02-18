@@ -3,6 +3,7 @@
 #
 # @author bdepwgjqet[at]gmail.com
 
+import sys
 import os
 import re
 import settings as cfg
