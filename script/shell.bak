@@ -1,0 +1,5 @@
+# module status
+systemctl status systemd-modules-load.service
+ls -al /etc/modules-load.d/
+systemctl list-units
+systemd archwiki
