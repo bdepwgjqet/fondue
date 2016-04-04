@@ -3,4 +3,9 @@
 *.in
 *.Bmp
 *.swp
+*.csv
+*.xls
 tags
+.ropeproject
+output
+build
