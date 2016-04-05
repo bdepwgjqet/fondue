@@ -23,9 +23,15 @@ def execute():
         time.sleep(5)
         symbol = symbol.strip()
         path = "output/" + symbol + ".xls"
-        s = trade.trade_inf(symbol, date)
+        try:
+            s = trade.trade_inf(symbol, date)
+        except ValueError as e:
+            print e.message
+            print 'Please Contact the author, thanks :)'
+            return
         s = [[y for y in x.split('\t')] for x in s.split('\n')]
         save.save_to_xls(s, path)
+    raw_input('Press any key to exit.')
 
 
 if __name__ == '__main__':
