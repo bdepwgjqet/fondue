@@ -1,0 +1,10 @@
+# sp file
+in
+out
+terminalout
+jieba
+
+# ftype
+*.bak
+*.full
+*.pyc
