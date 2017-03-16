@@ -4,16 +4,20 @@
 from Jieba import JiebaInvoker
 from difflib import SequenceMatcher
 import operator
+from optfidf import Predict as TfidfPredict
 
 class Opinion(object):
 
-    def __init__(self, core):
+    def __init__(self, core, weight):
         self.core = core
         self.sentence = ""
         self.sentence_comb = []
         self.rawsent = ""
         self.around = []
-        self.weight = 0
+        self.weight = weight
+        self.tweight = 0.0
+        self.sumweight = 0.0
+        self.percent = 0.0
 
     def check_word_comb(self, lgl, sml):
         for c in sml:
@@ -21,44 +25,58 @@ class Opinion(object):
                 return False
         return True
 
-    def gensentence(self):
+    def gensentence(self, wordweight):
         self.sentence = ""
         self.rawsent = ""
         issent = False
+        rcore = ""
+        rcorescore = 0
         for (k,v) in self.around[0:-1]:
             self.rawsent += k
-            #if v in ['r','y','a','v', 'd', 'vn', 'b', 'uj', 'n', 'ns', 'vn', 'nr', 'nt', 'an']:
             self.sentence += k
             self.sentence_comb.append(v)
             if v in ['v', 'd']:
                 issent = True
-            #else:
-            #    self.sentence = ""
-            #    self.sentence_comb = []
-            #    issent = False
+            if k in wordweight:
+                self.tweight += self.weight*wordweight[k]
+                if wordweight[k] > rcorescore:
+                    rcorescore = wordweight[k]
+                    rcore = k
         if self.check_word_comb(self.sentence_comb, ['a', 'uj']):
             issent = True
 
         self.rawsent += self.core
         self.sentence += self.core
+
         if issent == False:
             self.sentence = ""
 
+        self.core = rcore
+
 class Topic(object):
 
-    def __init__(self, topic, uri, cmts):
+    def __init__(self, topic):
         self.topic = topic
-        self.uri = uri
+        self.comments = []
+        self.jbcomments = []
         self.firstop = ""
         self.secondop = ""
+        self.totalopweight = 0
         self.firstopnum = 0
         self.secondopnum = 0
-        self.comments = cmts.split('###SEP###')
-        self.jbcomments = []
-        for comment in self.comments:
-            if not comment:
-                continue
-            jbinvoker = JiebaInvoker(comment)
+        self.positive = 0
+        self.negtive = 0
+        self.uri = []
+        self.agreedic = dict()
+        self.corewords = dict()
+        self.mainop = []
+
+    def insertcomment(self, url, content, agree):
+        if url not in self.uri:
+            self.uri.append(url)
+        self.comments.append(content)
+        if content:
+            jbinvoker = JiebaInvoker(content)
             pars = jbinvoker.cut()
 
             words = []
@@ -66,22 +84,67 @@ class Topic(object):
             for k,v in pars:
                 words.append((k, v))
             self.jbcomments.append(words)
+        cagree = 1
+        try:
+            cagree = 1 + int(agree)
+        except:
+            cagree = 1
+        if content not in self.agreedic:
+            self.agreedic[content] = 0
+
+        self.agreecnt = self.agreedic[content]
+        self.agreecnt += cagree
+        self.agreedic[content] = self.agreecnt
+
+    """
+    def minesentiment(self):
+        self.positive = 0
+        self.negtive = 0
+        self.ttlsentiment = 0
+        for cmt in self.comments:
+            snlp = SnowNLP(cmt.decode('utf-8'))
+            print "sentiment for: ", cmt, snlp.sentiments
+            if snlp.sentiments > 0.7:
+                self.positive += 1
+            elif snlp.sentiments < 0.3:
+                self.negtive += 1
+    """
+
+    def minecorewords(self, vectorfile):
+        print vectorfile
+        contents = []
+        content = []
+        for comment in self.jbcomments:
+            content.append(" ".join([x for x,v in comment]))
+        contents.append(" ".join([x for x in content]))
+        corekeys = TfidfPredict(contents, vectorfile)
+        if len(corekeys) > 0:
+            corewords = dict()
+            for k,v in corekeys[0]:
+                corewords[k] = v
+                #print k.encode('utf-8'), v
+            return corewords
+        return dict()
 
 
-
-    def mineopinion(self):
+    def mineopinion(self, vectorfile):
+        self.corewords = self.minecorewords(vectorfile)
 
         opcans = []
-        wordfreq = {}
-        for jbc in self.jbcomments:
+        corewordfreq = {}
+        for i in range(0,len(self.jbcomments)):
+            jbc = self.jbcomments[i]
+            rawcomment = self.comments[i]
+            if rawcomment not in self.agreedic:
+                print "ERROR, comment not found." + rawcomment
+            cweight = self.agreedic[rawcomment]
             l = 0
             r = 0
             curaround = []
 
-            #wlist = [x[0] for x in jbc]
-            #print "".join(wlist).encode('utf-8')
-            #for (k,v) in jbc:
-            #    print k.encode('utf-8') + "\t" + v.encode('utf-8')
+            #print "".join([x[0] for x in jbc]).encode("utf-8"), len(jbc)
+            if len(jbc) >= 30:
+                continue
 
             while r < len(jbc):
 
@@ -99,54 +162,77 @@ class Topic(object):
 
                 curaround.append((jbc[r][0], jbc[r][1]))
 
-                if (jbc[r][1] in ['n', 'ns', 'vn', 'nr', 'nt', 'an'] and r > l + 3)\
-                    or (r+1 < len(jbc) and jbc[r+1][1] in ['x'] and r-l+1<10 and r-l+1>3)\
+                #if (jbc[r][1] in ['n', 'ns', 'vn', 'nr', 'nt', 'an'] and r > l + 3) or \
+                if (r+1 < len(jbc) and jbc[r+1][1] in ['x'] and r-l+1<10 and r-l+1>3)\
                     or (r+1 == len(jbc) and r-l+1<10 and r-l+1>3):
 
-                    curop = Opinion(jbc[r][0])
+                    curop = Opinion(jbc[r][0], cweight)
                     curop.around = curaround
-                    curop.weight = 1
-                    curop.gensentence()
+                    curop.gensentence(self.corewords)
                     if curop.sentence:
+                        #print curop.core.encode('utf-8'), curop.sentence.encode('utf-8'), curop.tweight
                         opcans.append(curop)
-                        if curop.core in wordfreq:
-                            wordfreq[curop.core] = wordfreq[curop.core] + 1
-                        else:
-                            wordfreq[curop.core] = 1
-                    #print curop.sentence.encode('utf-8'), curop.rawsent.encode('utf-8'),"====>"
 
                     curaround = []
                     l = r + 1
                 r += 1
-#
-        sorted_freq = sorted(wordfreq.items(), key=operator.itemgetter(1),
-                             reverse=True)
 
-        '''
-        for op in opcans:
-            print op.sentence.encode('utf-8'), op.rawsent.encode('utf-8')
+        oplist = self.clusterop(opcans)
+        opboard = sorted(oplist, key=lambda x: x.sumweight, reverse=True)
+        self.totalopweight = 0
+        for op in opboard:
+            self.totalopweight += op.sumweight
+        curttlweight = 0.0
+        if self.totalopweight <= 0.0:
+            return
+        for op in opboard:
+            if curttlweight/self.totalopweight < 0.6 or len(self.mainop) < 2:
+                self.mainop.append(op)
+            curttlweight += op.sumweight 
+        #for op in self.mainop:
+        #    print op.sentence.encode('utf-8'), op.sumweight
 
-        for (k, v) in sorted_freq:
-            print k.encode('utf-8'), v
-        '''
+            
+    #to improve
+    def clusterop(self, opcans):
+        group = []
+        for i in range(len(opcans)):
+            group.append(i)
+        for i in range(len(opcans)):
+            op = opcans[i]
+            for j in range(i+1, len(opcans)):
+                nop = opcans[j]
+                if self.similarity(nop.sentence.encode('utf-8'), op.sentence.encode('utf-8')):
+                    print i,j,group[i],group[j]
+                    for k in range(len(opcans)):
+                        if group[k] == group[i] or group[k] == group[j]:
+                            group[k] = min(group[i], group[j])
+        #for i in range(len(opcans)):
+        #    print i, opcans[i].sentence.encode('utf-8'), group[i]
 
-        opfreq = {}
-        for (k, v) in sorted_freq:
-            (op, cnt) = self.generateop(opcans, k)
-            opfreq[op] = cnt
+        clusteredops = []
+        idtogroup = dict()
+        for i in range(len(opcans)):
+            if group[i] not in idtogroup:
+                idtogroup[group[i]] = []
+            idtogroup[group[i]].append(opcans[i])
+        for k in idtogroup:
+            v = idtogroup[k]
+            mxscore = 0
+            sumscore = 0
+            mxidx = 0
+            for idx in range(len(v)):
+                op = v[idx]
+                sumscore += op.tweight
+                if mxscore < op.tweight:
+                    mxscore = op.tweight
+                    mxidx = idx
+            v[mxidx].sumweight = sumscore
+            clusteredops.append(v[mxidx])
+        return clusteredops
 
-        sorted_opfreq = sorted(opfreq.items(), key=operator.itemgetter(1),
-                               reverse=True)
-        if len(sorted_opfreq) > 0:
-            self.firstop, self.firstopnum = sorted_opfreq[0]
-            for (k,v) in sorted_opfreq[1:]:
-                if (self.similarity(self.firstop, k) == False):
-                    self.secondop, self.secondopnum = k,v
-                    self.recalcularopnum(opcans)
-                    break
-        #print self.firstop, self.firstopnum, self.secondop, self.secondopnum
 
-    def generateop(self, opcans, coreword):
+    def ranktopop(self, opcans, coreword):
 
         if len(opcans) <= 0:
             return ("", 0)
@@ -162,7 +248,7 @@ class Topic(object):
         for (k,v) in sentfreq.iteritems():
             for op in opcans:
                 if self.similarity(k.encode('utf-8'), op.sentence.encode('utf-8')):
-                    v = v + 1
+                    v = v + op.tweight
             sentfreq[k] = v
         sorted_cans = sorted(sentfreq.items(), key=operator.itemgetter(1),
                              reverse=True)
@@ -172,15 +258,16 @@ class Topic(object):
         self.firstopnum = 0
         self.secondopnum = 0
         for op in opcans:
-            fr = SequenceMatcher(None, op.sentence, unicode(self.firstop, "utf-8")).ratio()
-            sr = SequenceMatcher(None, op.sentence, unicode(self.secondop, "utf-8")).ratio()
-            if fr > sr:
-                self.firstopnum += 1
-            else:
-                self.secondopnum += 1
+            if self.similarity(self.firstop, op.sentence.encode('utf-8')):
+                self.firstopnum += op.tweight
+                print self.firstopnum,op.sentence.encode('utf-8'), op.tweight
+            if self.similarity(self.secondop, op.sentence.encode('utf-8')):
+                self.secondopnum += op.tweight
+                print self.secondopnum,op.sentence.encode('utf-8'), op.tweight
 
     def similarity(self, a, b):
         similarp = SequenceMatcher(None, a, b).ratio()
+        #print a, b, similarp
 
         if similarp > 0.58:
             return True

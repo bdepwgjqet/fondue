@@ -3,11 +3,12 @@
 
 import sys
 import re
+import traceback
 from Topic import Topic
 
 
 def process():
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         return
 
     pars = {}
@@ -18,35 +19,59 @@ def process():
 
     ipath = pars["SampleInput"]
     opath = pars["SampleOutput"]
+    vectorfile = pars["trainedvec"]
+
+    print ipath, opath, vectorfile
 
     ofile = open(opath, 'w')
+
+    topicdic = dict()
 
     with open(ipath, 'r') as ifile:
         for line in ifile:
             try:
                 cols = line.split('\t')
-                if len(cols) != 9:
+                if len(cols) != 11:
                     continue
-                if not cols[7]:
+                if not cols[8]:
                     continue
-                if not cols[1]:
+                if not cols[2]:
                     continue
-                topic = Topic(cols[1], cols[3], cols[7])
-                topic.mineopinion()
-                fn = topic.firstopnum
-                sn = topic.secondopnum
-                if fn + sn <= 0:
+                if not cols[0]:
                     continue
-                #ofile.write(cols[7]+"\n")
-                ofile.write(topic.topic + "\t" + topic.firstop + "\t" +
-                            "%.2f"%(1.0*fn/(fn+sn)) + "\t" + topic.secondop +
-                            "\t" + "%.2f"%(1.0*sn/(fn+sn)) + "\t" + topic.uri +"\n")
+                if cols[0] not in topicdic:
+                    topicdic[cols[0]] = Topic(cols[2])
+                curtopic = topicdic[cols[0]]
+                curtopic.insertcomment(cols[4], cols[8], cols[9])
+                topicdic[cols[0]] = curtopic
             except:
+                traceback.print_exc(file=sys.stdout)
                 continue
 
-            #print "RES\t"+topic.topic + "\t" + topic.firstop + "\t" + \
-            #            "%.2f"%(1.0*fn/(fn+sn)) + "\t" + topic.secondop + \
-            #            "\t" + "%.2f"%(1.0*sn/(fn+sn)) + "\n"
+    for tid, topic in topicdic.items():
+        try:
+            if len(topic.comments) < 20:
+                continue
+            topic.mineopinion(vectorfile)
+            #topic.minesentiment()
+            tw = topic.totalopweight
+            if tw <= 0.0:
+                continue
+            opstr = ""
+            for i in range(len(topic.mainop)):
+                if i >= 5:
+                    break
+                op = topic.mainop[i]
+                if opstr:
+                    opstr += ".　　"
+                opstr += str(i+1) + "."
+                opstr += op.sentence.encode('utf-8') + " " + "{:.1%}".format(op.sumweight/tw)
+            print opstr
+            show = topic.topic + "\t" + opstr + "\t" + ";".join(topic.uri) + "\n";
+            ofile.write(show)
+        except:
+            traceback.print_exc(file=sys.stdout)
+            continue
 
 if __name__ == '__main__':
     try:

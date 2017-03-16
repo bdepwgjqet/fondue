@@ -5,6 +5,8 @@
 *.swp
 *.csv
 *.xls
+*.json
+*.xml
 tags
 .ropeproject
 output

@@ -8,3 +8,11 @@ jieba
 *.bak
 *.full
 *.pyc
+*.tsv
+*.in
+*.out
+*.feed
+*.picture
+*.pkl
+
+data
