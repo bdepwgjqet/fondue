@@ -27,7 +27,7 @@ def TrainBase(infile, cutwordfile, vectorfile):
 # save cut word res of corpus
     with open(cutwordfile, "w+") as f:
         for review in corpus:
-            f.write(review.encode('utf-8') + "\n")
+            f.write(review + "\n")
         f.close()
 
 
@@ -54,8 +54,8 @@ def Predict(contents, vecfile):
     return ctfidf
 
 
-#vectorfile = "trained-vec.pkl"
-#TrainBase("reviews.in", "reviews-cut-word.out", vectorfile)
+vectorfile = "trained-vec.pkl"
+TrainBase("reviews.in", "reviews-cut-word.out", vectorfile)
 
 #newcorpus = Cutword("newreviews.in")
 #ckeys = Predict(newcorpus, vectorfile)

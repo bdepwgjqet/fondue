@@ -8,7 +8,7 @@ from Topic import Topic
 
 
 def process():
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         return
 
     pars = {}
@@ -20,8 +20,9 @@ def process():
     ipath = pars["SampleInput"]
     opath = pars["SampleOutput"]
     vectorfile = pars["trainedvec"]
+    vocab = pars["vocab"]
 
-    print ipath, opath, vectorfile
+    print(ipath, opath, vectorfile)
 
     ofile = open(opath, 'w')
 
@@ -53,7 +54,10 @@ def process():
             if len(topic.comments) < 20:
                 continue
             topic.mineopinion(vectorfile)
-            #topic.minesentiment()
+            topic.minesentiment(vocab)
+            posrate = "{:.1%}".format(1.0*topic.positive/topic.ttlsentiment)
+            negrate = "{:.1%}".format(1.0*topic.negtive/topic.ttlsentiment)
+            print(posrate,negrate)
             tw = topic.totalopweight
             if tw <= 0.0:
                 continue
@@ -65,8 +69,9 @@ def process():
                 if opstr:
                     opstr += ".　　"
                 opstr += str(i+1) + "."
-                opstr += op.sentence.encode('utf-8') + " " + "{:.1%}".format(op.sumweight/tw)
-            print opstr
+                opstr += op.sentence + " " + "{:.1%}".format(op.sumweight/tw)
+            opstr = opstr + "\t" + posrate + "\t" + negrate
+            print(opstr)
             show = topic.topic + "\t" + opstr + "\t" + ";".join(topic.uri) + "\n";
             ofile.write(show)
         except:
@@ -76,5 +81,5 @@ def process():
 if __name__ == '__main__':
     try:
         process()
-    except Exception, e:
+    except:
         sys.exit(0)

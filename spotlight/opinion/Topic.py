@@ -5,6 +5,7 @@ from Jieba import JiebaInvoker
 from difflib import SequenceMatcher
 import operator
 from optfidf import Predict as TfidfPredict
+from evalsentiment import predict as predictsent
 
 class Opinion(object):
 
@@ -96,22 +97,26 @@ class Topic(object):
         self.agreecnt += cagree
         self.agreedic[content] = self.agreecnt
 
-    """
-    def minesentiment(self):
+    def minesentiment(self, vocab_path):
         self.positive = 0
         self.negtive = 0
         self.ttlsentiment = 0
-        for cmt in self.comments:
-            snlp = SnowNLP(cmt.decode('utf-8'))
-            print "sentiment for: ", cmt, snlp.sentiments
-            if snlp.sentiments > 0.7:
-                self.positive += 1
-            elif snlp.sentiments < 0.3:
-                self.negtive += 1
-    """
+        x_raw = []
+        for words in self.jbcomments:
+            comment = " ".join([x for x,y in words])
+            x_raw.append(comment)
+        y = predictsent(x_raw, vocab_path)
+        for idx in range(len(self.comments)):
+            cmt = self.comments[idx]
+            cweight = self.agreedic[cmt]
+            if y[idx] > 0.5:
+                self.positive += cweight
+            else:
+                self.negtive += cweight
+            self.ttlsentiment += cweight
 
     def minecorewords(self, vectorfile):
-        print vectorfile
+        print(vectorfile)
         contents = []
         content = []
         for comment in self.jbcomments:
@@ -136,7 +141,7 @@ class Topic(object):
             jbc = self.jbcomments[i]
             rawcomment = self.comments[i]
             if rawcomment not in self.agreedic:
-                print "ERROR, comment not found." + rawcomment
+                print("ERROR, comment not found." + rawcomment)
             cweight = self.agreedic[rawcomment]
             l = 0
             r = 0
@@ -203,7 +208,7 @@ class Topic(object):
             for j in range(i+1, len(opcans)):
                 nop = opcans[j]
                 if self.similarity(nop.sentence.encode('utf-8'), op.sentence.encode('utf-8')):
-                    print i,j,group[i],group[j]
+                    print(i,j,group[i],group[j])
                     for k in range(len(opcans)):
                         if group[k] == group[i] or group[k] == group[j]:
                             group[k] = min(group[i], group[j])
@@ -260,10 +265,10 @@ class Topic(object):
         for op in opcans:
             if self.similarity(self.firstop, op.sentence.encode('utf-8')):
                 self.firstopnum += op.tweight
-                print self.firstopnum,op.sentence.encode('utf-8'), op.tweight
+                print(self.firstopnum,op.sentence.encode('utf-8'), op.tweight)
             if self.similarity(self.secondop, op.sentence.encode('utf-8')):
                 self.secondopnum += op.tweight
-                print self.secondopnum,op.sentence.encode('utf-8'), op.tweight
+                print(self.secondopnum,op.sentence.encode('utf-8'), op.tweight)
 
     def similarity(self, a, b):
         similarp = SequenceMatcher(None, a, b).ratio()

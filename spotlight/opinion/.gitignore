@@ -16,3 +16,6 @@ jieba
 *.pkl
 
 data
+
+vocab
+runs
