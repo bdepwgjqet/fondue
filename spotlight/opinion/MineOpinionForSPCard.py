@@ -8,6 +8,7 @@ from Topic import Topic
 
 
 def process():
+    print(len(sys.argv))
     if len(sys.argv) != 5:
         return
 
@@ -24,30 +25,32 @@ def process():
 
     print(ipath, opath, vectorfile)
 
-    ofile = open(opath, 'w')
+    ofile = open(opath, 'w', encoding="utf8")
 
     topicdic = dict()
-
-    with open(ipath, 'r') as ifile:
-        for line in ifile:
-            try:
-                cols = line.split('\t')
-                if len(cols) != 11:
-                    continue
-                if not cols[8]:
-                    continue
-                if not cols[2]:
-                    continue
-                if not cols[0]:
-                    continue
-                if cols[0] not in topicdic:
-                    topicdic[cols[0]] = Topic(cols[2])
-                curtopic = topicdic[cols[0]]
-                curtopic.insertcomment(cols[4], cols[8], cols[9])
-                topicdic[cols[0]] = curtopic
-            except:
-                traceback.print_exc(file=sys.stdout)
+    try:
+        ifile = open(ipath, 'r', encoding="utf8")
+        lines = ifile.readlines()
+        print(len(lines))
+        for line in lines:
+            cols = line.split('\t')
+            if len(cols) != 11:
                 continue
+            if not cols[8]:
+                continue
+            if not cols[2]:
+                continue
+            if not cols[0]:
+                continue
+            if cols[0] not in topicdic:
+                topicdic[cols[0]] = Topic(cols[2])
+            curtopic = topicdic[cols[0]]
+            curtopic.insertcomment(cols[4], cols[8], cols[9])
+            topicdic[cols[0]] = curtopic
+    except:
+        traceback.print_exc(file=sys.stdout)
+    else:
+        ifile.close()
 
     for tid, topic in topicdic.items():
         try:
@@ -71,7 +74,7 @@ def process():
                 opstr += str(i+1) + "."
                 opstr += op.sentence + " " + "{:.1%}".format(op.sumweight/tw)
             opstr = opstr + "\t" + posrate + "\t" + negrate
-            print(opstr)
+            print(opstr.encode('utf8'))
             show = topic.topic + "\t" + opstr + "\t" + ";".join(topic.uri) + "\n";
             ofile.write(show)
         except:

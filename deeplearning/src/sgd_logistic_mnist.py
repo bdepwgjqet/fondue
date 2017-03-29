@@ -92,7 +92,7 @@ def sgd_optimization_mnist(learning_rate=0.13, n_epochs=1000, dataset='mnist.pkl
         }
     )
 
-    print 'training...'
+    print('training...')
     patience = 5000
     patience_increase = 2
 
@@ -165,7 +165,7 @@ def sgd_optimization_mnist(learning_rate=0.13, n_epochs=1000, dataset='mnist.pkl
         epoch, 1. * epoch / (end_time - start_time)))
 
 def predict(dataset='mnist.pkl.gz'):
-    classifier = pickle.load(open('sgd_mnist_best_model.pkl'))
+    classifier = pickle.load(open("sgd_mnist_best_model.pkl", "rb"), encoding='latin1')
 
     predict_model = theano.function(inputs=[classifier.input], outputs=classifier.y_pred)
 

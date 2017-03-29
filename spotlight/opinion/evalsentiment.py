@@ -24,6 +24,7 @@ def predict(x_raw, vocab_path, batch_size=64, allow_soft_placement=True, log_dev
 # ==================================================
     try:
         checkpoint_file = tf.train.latest_checkpoint(checkpoint_dir)
+        print(checkpoint_file, "{}.meta".format(checkpoint_file))
         graph = tf.Graph()
         with graph.as_default():
             session_conf = tf.ConfigProto(
