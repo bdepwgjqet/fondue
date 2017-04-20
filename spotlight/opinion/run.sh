@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 MineOpinionForSPCard.py SampleInput:in trainedvec:trained-vec.pkl vocab:vocab SampleOutput:out > terminalout
+python3 MineOpinionForSPCard.py SampleInput:in models:models.zip SampleOutput:out > terminalout

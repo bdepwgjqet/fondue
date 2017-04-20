@@ -54,8 +54,8 @@ def Predict(contents, vecfile):
     return ctfidf
 
 
-vectorfile = "trained-vec.pkl"
-TrainBase("reviews.in", "reviews-cut-word.out", vectorfile)
+#vectorfile = "trained-vec.pkl"
+#TrainBase("reviews.in", "reviews-cut-word.out", vectorfile)
 
 #newcorpus = Cutword("newreviews.in")
 #ckeys = Predict(newcorpus, vectorfile)

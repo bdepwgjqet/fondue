@@ -105,18 +105,39 @@ class Topic(object):
         for words in self.jbcomments:
             comment = " ".join([x for x,y in words])
             x_raw.append(comment)
-        y = predictsent(x_raw, vocab_path)
+        y = predictsent(x_raw, vocab_path, checkpoint_dir="./models/2class/checkpoints")
+        self.sentiments_y = []
         for idx in range(len(self.comments)):
             cmt = self.comments[idx]
             cweight = self.agreedic[cmt]
             if y[idx] > 0.5:
                 self.positive += cweight
+                self.sentiments_y.append('P')
             else:
                 self.negtive += cweight
+                self.sentiments_y.append('N')
             self.ttlsentiment += cweight
 
+    def mineemotion(self, model_path):
+        self.emolist = ["其它", "高兴", "愤怒", "厌恶", "难过", "恐惧", "惊奇"]
+        self.emoweight = [0, 0, 0, 0, 0, 0, 0]
+        self.ttlemotion = 0
+        x_raw = []
+        for words in self.jbcomments:
+            comment = " ".join([x for x,y in words])
+            x_raw.append(comment)
+        y = predictsent(x_raw, model_path + "/vocab", checkpoint_dir= model_path + "/checkpoints")
+        for idx in range(len(self.comments)):
+            cmt = self.comments[idx]
+            cweight = self.agreedic[cmt]
+            self.emoweight[int(y[idx])] += cweight
+            self.ttlemotion += cweight
+
+        #hack for happy
+        #self.emoweight[0] += self.emoweight[1]
+        #self.emoweight[1] = 0
+
     def minecorewords(self, vectorfile):
-        print(vectorfile)
         contents = []
         content = []
         for comment in self.jbcomments:
@@ -127,7 +148,6 @@ class Topic(object):
             corewords = dict()
             for k,v in corekeys[0]:
                 corewords[k] = v
-                #print k.encode('utf-8'), v
             return corewords
         return dict()
 
@@ -147,7 +167,6 @@ class Topic(object):
             r = 0
             curaround = []
 
-            #print "".join([x[0] for x in jbc]).encode("utf-8"), len(jbc)
             if len(jbc) >= 30:
                 continue
 
@@ -175,7 +194,6 @@ class Topic(object):
                     curop.around = curaround
                     curop.gensentence(self.corewords)
                     if curop.sentence:
-                        #print curop.core.encode('utf-8'), curop.sentence.encode('utf-8'), curop.tweight
                         opcans.append(curop)
 
                     curaround = []
@@ -194,8 +212,15 @@ class Topic(object):
             if curttlweight/self.totalopweight < 0.6 or len(self.mainop) < 2:
                 self.mainop.append(op)
             curttlweight += op.sumweight 
-        #for op in self.mainop:
-        #    print op.sentence.encode('utf-8'), op.sumweight
+        self.mainopids = []
+        for op in self.mainop:
+            curid = -1
+            for idx in range(len(self.comments)):
+                comment = self.comments[idx]
+                if op.sentence in comment:
+                    curid = idx
+                    break
+            self.mainopids.append(curid)
 
             
     #to improve
@@ -208,12 +233,10 @@ class Topic(object):
             for j in range(i+1, len(opcans)):
                 nop = opcans[j]
                 if self.similarity(nop.sentence.encode('utf-8'), op.sentence.encode('utf-8')):
-                    print(i,j,group[i],group[j])
+                    #print(i,j,group[i],group[j])
                     for k in range(len(opcans)):
                         if group[k] == group[i] or group[k] == group[j]:
                             group[k] = min(group[i], group[j])
-        #for i in range(len(opcans)):
-        #    print i, opcans[i].sentence.encode('utf-8'), group[i]
 
         clusteredops = []
         idtogroup = dict()

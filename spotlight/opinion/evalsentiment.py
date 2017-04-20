@@ -11,8 +11,7 @@ import csv
 import traceback
 import sys, pdb
 
-def predict(x_raw, vocab_path, batch_size=64, allow_soft_placement=True, log_device_placement=False):
-    checkpoint_dir = "./runs/2class/checkpoints";
+def predict(x_raw, vocab_path, checkpoint_dir , batch_size=64, allow_soft_placement=True, log_device_placement=False):
     vocab_processor = learn.preprocessing.VocabularyProcessor.restore(vocab_path)
 
 # Map data into vocabulary
