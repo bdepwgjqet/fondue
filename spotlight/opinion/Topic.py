@@ -99,23 +99,36 @@ class Topic(object):
 
     def minesentiment(self, vocab_path):
         self.positive = 0
+        self.midsent = 0
         self.negtive = 0
         self.ttlsentiment = 0
         x_raw = []
         for words in self.jbcomments:
             comment = " ".join([x for x,y in words])
             x_raw.append(comment)
-        y = predictsent(x_raw, vocab_path, checkpoint_dir="./models/2class/checkpoints")
+        y = predictsent(x_raw, vocab_path, checkpoint_dir="./models/3class/checkpoints")
         self.sentiments_y = []
         for idx in range(len(self.comments)):
             cmt = self.comments[idx]
             cweight = self.agreedic[cmt]
+            """
             if y[idx] > 0.5:
                 self.positive += cweight
                 self.sentiments_y.append('P')
             else:
                 self.negtive += cweight
                 self.sentiments_y.append('N')
+            """
+            if y[idx] > 1.5:
+                self.midsent += cweight
+                self.sentiments_y.append('M')
+            elif y[idx] >= 0.5:
+                self.positive += cweight
+                self.sentiments_y.append('P')
+            else:
+                self.negtive += cweight
+                self.sentiments_y.append('N')
+
             self.ttlsentiment += cweight
 
     def mineemotion(self, model_path):

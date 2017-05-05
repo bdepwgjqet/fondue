@@ -1,0 +1,1000 @@
+ 1234  19/04/17 20:14:39 vim MineOpinionForSPCard.py 
+ 1235  19/04/17 20:14:39 ls
+ 1236  19/04/17 20:14:39 ls models
+ 1237  19/04/17 20:14:39 ls -lh models
+ 1238  19/04/17 20:14:39 ls -lh models/2class/
+ 1239  19/04/17 20:14:39 ls -lh models/2class/checkpoints/
+ 1240  19/04/17 20:14:39 ls
+ 1241  19/04/17 20:14:39 vim terminalout 
+ 1242  19/04/17 20:14:39 vim MineOpinionForSPCard.py 
+ 1243  19/04/17 20:14:39 ./run
+ 1244  19/04/17 20:14:39 ./run.sh 
+ 1245  19/04/17 20:14:39 ls
+ 1246  19/04/17 20:14:39 ping baidu.com
+ 1247  19/04/17 20:14:39 ls
+ 1248  19/04/17 20:14:39 cd ..ls
+ 1249  19/04/17 20:14:39 ls
+ 1250  19/04/17 20:14:39 cd ..
+ 1251  19/04/17 20:14:39 ls
+ 1252  19/04/17 20:14:39 ls opinion/
+ 1253  19/04/17 20:14:39 vim opinion/in 
+ 1254  19/04/17 20:14:39 ls
+ 1255  19/04/17 20:14:39 cd ..
+ 1256  19/04/17 20:14:39 ls
+ 1257  19/04/17 20:14:39 cd ..
+ 1258  19/04/17 20:14:39 ls
+ 1259  19/04/17 20:14:39 cd fondue/
+ 1260  19/04/17 20:14:39 ls
+ 1261  19/04/17 20:14:39 cd mongodb/
+ 1262  19/04/17 20:14:39 cd ..
+ 1263  19/04/17 20:14:39 ls
+ 1264  19/04/17 20:14:39 cd deeplearning/
+ 1265  19/04/17 20:14:39 ls
+ 1266  19/04/17 20:14:39 cd src/
+ 1267  19/04/17 20:14:39 ls
+ 1268  19/04/17 20:14:39 vim sgd_logistic
+ 1269  19/04/17 20:14:39 vim sgd_logistic.py
+ 1270  19/04/17 20:14:39 vim mlp.py
+ 1271  19/04/17 20:14:39 vim sgd_logistic.py
+ 1272  19/04/17 20:14:39 ls
+ 1273  19/04/17 20:14:39 cd cod
+ 1274  19/04/17 20:14:39 cd yoyu/
+ 1275  19/04/17 20:14:39 ls
+ 1276  19/04/17 20:14:39 cd spotlight/
+ 1277  19/04/17 20:14:39 ls
+ 1278  19/04/17 20:14:39 cd sentiment/
+ 1279  19/04/17 20:14:39 ls
+ 1280  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1281  19/04/17 20:14:39 ls
+ 1282  19/04/17 20:14:39 vim text_cnn.py
+ 1283  19/04/17 20:14:39 ls
+ 1284  19/04/17 20:14:39 vim train.py 
+ 1285  19/04/17 20:14:39 vim data_helpers.py
+ 1286  19/04/17 20:14:39 ls
+ 1287  19/04/17 20:14:39 vim text_cnn.py
+ 1288  19/04/17 20:14:39 ls
+ 1289  19/04/17 20:14:39 vim train.py 
+ 1290  19/04/17 20:14:39 vim text_cnn.py
+ 1291  19/04/17 20:14:39 ls
+ 1292  19/04/17 20:14:39 pwd
+ 1293  19/04/17 20:14:39 cd ..
+ 1294  19/04/17 20:14:39 ls
+ 1295  19/04/17 20:14:39 cd ..
+ 1296  19/04/17 20:14:39 ls
+ 1297  19/04/17 20:14:39 mkdir emotion
+ 1298  19/04/17 20:14:39 ls
+ 1299  19/04/17 20:14:39 cd emotion/
+ 1300  19/04/17 20:14:39 ls
+ 1301  19/04/17 20:14:39 git clone https://github.com/dennybritz/cnn-text-classification-tf.git
+ 1302  19/04/17 20:14:39 ls
+ 1303  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1304  19/04/17 20:14:39 ls
+ 1305  19/04/17 20:14:39 ls data
+ 1306  19/04/17 20:14:39 ls data/rt-polaritydata/
+ 1307  19/04/17 20:14:39 unzip
+ 1308  19/04/17 20:14:39 ls
+ 1309  19/04/17 20:14:39 cd ..
+ 1310  19/04/17 20:14:39 ls
+ 1311  19/04/17 20:14:39 mkdir data
+ 1312  19/04/17 20:14:39 ls
+ 1313  19/04/17 20:14:39 cd data/
+ 1314  19/04/17 20:14:39 ls
+ 1315  19/04/17 20:14:39 pwd
+ 1316  19/04/17 20:14:39 ls
+ 1317  19/04/17 20:14:39 unzip corpus.zip 
+ 1318  19/04/17 20:14:39 ls
+ 1319  19/04/17 20:14:39 cd corpus/
+ 1320  19/04/17 20:14:39 ls
+ 1321  19/04/17 20:14:39 cd ..
+ 1322  19/04/17 20:14:39 ls
+ 1323  19/04/17 20:14:39 vim preprocess.py
+ 1324  19/04/17 20:14:39 ls
+ 1325  19/04/17 20:14:39 vim preprocess.py 
+ 1326  19/04/17 20:14:39 top 
+ 1327  19/04/17 20:14:39 ls
+ 1328  19/04/17 20:14:39 pwd
+ 1329  19/04/17 20:14:39 ls
+ 1330  19/04/17 20:14:39 top 
+ 1331  19/04/17 20:14:39 pwdx 28080
+ 1332  19/04/17 20:14:39 pkill 28080
+ 1333  19/04/17 20:14:39 top 
+ 1334  19/04/17 20:14:39 pkill -f 28080
+ 1335  19/04/17 20:14:39 top 
+ 1336  19/04/17 20:14:39 kill
+ 1337  19/04/17 20:14:39 man kill
+ 1338  19/04/17 20:14:39 kill -9 28080
+ 1339  19/04/17 20:14:39 top 
+ 1340  19/04/17 20:14:39 ls
+ 1341  19/04/17 20:14:39 top
+ 1342  19/04/17 20:14:39 kill -9 29190
+ 1343  19/04/17 20:14:39 top 
+ 1344  19/04/17 20:14:39 ls
+ 1345  19/04/17 20:14:39 vim emotionword.tsv 
+ 1346  19/04/17 20:14:39 ls
+ 1347  19/04/17 20:14:39 vim preprocess.py 
+ 1348  19/04/17 20:14:39 ls
+ 1349  19/04/17 20:14:39 vim crawled-reviews-20161101-20170401 
+ 1350  19/04/17 20:14:39 ls
+ 1351  19/04/17 20:14:39 vim crawled-reviews-20161101-20170401 
+ 1352  19/04/17 20:14:39 vim preprocess.py 
+ 1353  19/04/17 20:14:39 ls
+ 1354  19/04/17 20:14:39 vim corpus.txt 
+ 1355  19/04/17 20:14:39 vim emotionword.tsv 
+ 1356  19/04/17 20:14:39 vim preprocess.py 
+ 1357  19/04/17 20:14:39 ls
+ 1358  19/04/17 20:14:39 vim crawled-reviews-20161101-20170401 
+ 1359  19/04/17 20:14:39 ls
+ 1360  19/04/17 20:14:39 pwd
+ 1361  19/04/17 20:14:39 cp ../../../code/fondue/spotlight/opinion/Jieba.py ./
+ 1362  19/04/17 20:14:39 ls
+ 1363  19/04/17 20:14:39 vim Jieba.py 
+ 1364  19/04/17 20:14:39 vim preprocess.py 
+ 1365  19/04/17 20:14:39 ls
+ 1366  19/04/17 20:14:39 vim emotionword.tsv 
+ 1367  19/04/17 20:14:39 ls
+ 1368  19/04/17 20:14:39 vim preprocess.py 
+ 1369  19/04/17 20:14:39 vim emotionword.tsv 
+ 1370  19/04/17 20:14:39 vim preprocess.py 
+ 1371  19/04/17 20:14:39 ls
+ 1372  19/04/17 20:14:39 vim preprocess.py 
+ 1373  19/04/17 20:14:39 python3 preprocess.py > emotionlabel.tsv 
+ 1374  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1375  19/04/17 20:14:39 mv emotionlabel.tsv ../cnn-text-classification-tf/data/rt-polaritydata/
+ 1376  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1377  19/04/17 20:14:39 vim ../cnn-text-classification-tf/data/rt-polaritydata/emotionlabel.tsv 
+ 1378  19/04/17 20:14:39 vim preprocess.py 
+ 1379  19/04/17 20:14:39 python3 preprocess.py > emotionlabel.tsv
+ 1380  19/04/17 20:14:39 ls
+ 1381  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1382  19/04/17 20:14:39 vim preprocess.py 
+ 1383  19/04/17 20:14:39 python3 preprocess.py > emotionlabel.tsv
+ 1384  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1385  19/04/17 20:14:39 cp emotionlabel.tsv ../cnn-text-classification-tf/data/rt-polaritydata/
+ 1386  19/04/17 20:14:39 top 
+ 1387  19/04/17 20:14:39 nvidia-smi 
+ 1388  19/04/17 20:14:39 top 
+ 1389  19/04/17 20:14:39 ls
+ 1390  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1391  19/04/17 20:14:39 python
+ 1392  19/04/17 20:14:39 ls
+ 1393  19/04/17 20:14:39 cd ..
+ 1394  19/04/17 20:14:39 ls
+ 1395  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1396  19/04/17 20:14:39 ls
+ 1397  19/04/17 20:14:39 ls runs/1491372
+ 1398  19/04/17 20:14:39 ls runs/
+ 1399  19/04/17 20:14:39 ls runs/1491372221/checkpoints/
+ 1400  19/04/17 20:14:39 rm runs/1491372221/ -rf
+ 1401  19/04/17 20:14:39 ls runs/1491372450/checkpoints/
+ 1402  19/04/17 20:14:39 rm -rf runs/1491372450/checkpoints/
+ 1403  19/04/17 20:14:39 ls runs/1491372450/
+ 1404  19/04/17 20:14:39 ls runs/1491372450/summaries/
+ 1405  19/04/17 20:14:39 ls runs/1491372450/ -rf
+ 1406  19/04/17 20:14:39 ls
+ 1407  19/04/17 20:14:39 ls runs/1491372940/checkpoints/
+ 1408  19/04/17 20:14:39 ls runs/1491372450/
+ 1409  19/04/17 20:14:39 rm -rf runs/1491372450/
+ 1410  19/04/17 20:14:39 ls runs/1491372940/
+ 1411  19/04/17 20:14:39 ls runs/
+ 1412  19/04/17 20:14:39 ls
+ 1413  19/04/17 20:14:39 ls ../
+ 1414  19/04/17 20:14:39 ls ../../
+ 1415  19/04/17 20:14:39 vim ../../sentiment/cnn-text-classification-tf/data/predict/predict.in 
+ 1416  19/04/17 20:14:39 ls
+ 1417  19/04/17 20:14:39 cd ..
+ 1418  19/04/17 20:14:39 ls
+ 1419  19/04/17 20:14:39 cd data/
+ 1420  19/04/17 20:14:39 ls
+ 1421  19/04/17 20:14:39 vim crawled-reviews-20161101-20170401 
+ 1422  19/04/17 20:14:39 ls
+ 1423  19/04/17 20:14:39 vim preprocess.py 
+ 1424  19/04/17 20:14:39 vim emotion
+ 1425  19/04/17 20:14:39 ls
+ 1426  19/04/17 20:14:39 pwd
+ 1427  19/04/17 20:14:39 ls
+ 1428  19/04/17 20:14:39 vim in 
+ 1429  19/04/17 20:14:39 ls
+ 1430  19/04/17 20:14:39 mv in 20170406review
+ 1431  19/04/17 20:14:39 ls
+ 1432  19/04/17 20:14:39 mv 20170406review 20170406review.in
+ 1433  19/04/17 20:14:39 ls
+ 1434  19/04/17 20:14:39 vim preprocess.py 
+ 1435  19/04/17 20:14:39 ./preprocess.py 
+ 1436  19/04/17 20:14:39 ./preprocess.py > predict.in
+ 1437  19/04/17 20:14:39 python3 preprocess.py > predict.in
+ 1438  19/04/17 20:14:39 vim predict.in 
+ 1439  19/04/17 20:14:39 vim 20170406review.in 
+ 1440  19/04/17 20:14:39 ls
+ 1441  19/04/17 20:14:39 vim predict.in 
+ 1442  19/04/17 20:14:39 cd ..
+ 1443  19/04/17 20:14:39 ls
+ 1444  19/04/17 20:14:39 cp data/predict.in cnn-text-classification-tf/data/
+ 1445  19/04/17 20:14:39 ls
+ 1446  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1447  19/04/17 20:14:39 ls
+ 1448  19/04/17 20:14:39 vim eval.py 
+ 1449  19/04/17 20:14:39 vim ../../sentiment/cnn-text-classification-tf/eval.py 
+ 1450  19/04/17 20:14:39 cp ../../sentiment/cnn-text-classification-tf/eval.py ./
+ 1451  19/04/17 20:14:39 ls
+ 1452  19/04/17 20:14:39 vim eval.py 
+ 1453  19/04/17 20:14:39 cd data/
+ 1454  19/04/17 20:14:39 ls
+ 1455  19/04/17 20:14:39 mkdir predict
+ 1456  19/04/17 20:14:39 mv predict.in predict
+ 1457  19/04/17 20:14:39 ls
+ 1458  19/04/17 20:14:39 ls predict/
+ 1459  19/04/17 20:14:39 cd ..
+ 1460  19/04/17 20:14:39 ls
+ 1461  19/04/17 20:14:39 vim eval.py 
+ 1462  19/04/17 20:14:39 python3 eval.py --checkpoint_dir="runs/1491372940/"
+ 1463  19/04/17 20:14:39 ls runs/1491372940/
+ 1464  19/04/17 20:14:39 python3 eval.py --checkpoint_dir="runs/1491372940/checkpoints/"
+ 1465  19/04/17 20:14:39 vim runs/1491372940/prediction.csv 
+ 1466  19/04/17 20:14:39 pwd
+ 1467  19/04/17 20:14:39 cd runs/1491372940/
+ 1468  19/04/17 20:14:39 ls
+ 1469  19/04/17 20:14:39 pwd
+ 1470  19/04/17 20:14:39 lls
+ 1471  19/04/17 20:14:39 cd ..
+ 1472  19/04/17 20:14:39 ls
+ 1473  19/04/17 20:14:39 cd ..
+ 1474  19/04/17 20:14:39 ls
+ 1475  19/04/17 20:14:39 vim data/rt-polaritydata/emotionlabel.tsv 
+ 1476  19/04/17 20:14:39 vim data/predict/predict.in 
+ 1477  19/04/17 20:14:39 ls
+ 1478  19/04/17 20:14:39 vim data/predict/predict.in 
+ 1479  19/04/17 20:14:39 vim runs/1491372940/prediction.csv 
+ 1480  19/04/17 20:14:39 ls
+ 1481  19/04/17 20:14:39 vim eval.py 
+ 1482  19/04/17 20:14:39 vim runs/1491372940/prediction.csv 
+ 1483  19/04/17 20:14:39 ls
+ 1484  19/04/17 20:14:39 cd ..
+ 1485  19/04/17 20:14:39 ls
+ 1486  19/04/17 20:14:39 cd data/
+ 1487  19/04/17 20:14:39 ls
+ 1488  19/04/17 20:14:39 vim emotionword.tsv 
+ 1489  19/04/17 20:14:39 ls
+ 1490  19/04/17 20:14:39 cd ..
+ 1491  19/04/17 20:14:39 ls
+ 1492  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1493  19/04/17 20:14:39 ls
+ 1494  19/04/17 20:14:39 vim runs/1491372940/prediction.csv 
+ 1495  19/04/17 20:14:39 ls
+ 1496  19/04/17 20:14:39 cd ..
+ 1497  19/04/17 20:14:39 ls
+ 1498  19/04/17 20:14:39 cd data/
+ 1499  19/04/17 20:14:39 ls
+ 1500  19/04/17 20:14:39 vim emotionword.tsv 
+ 1501  19/04/17 20:14:39 ls
+ 1502  19/04/17 20:14:39 vim preprocess.py 
+ 1503  19/04/17 20:14:39 ./preprocess.py > WeiboTrainingData.in
+ 1504  19/04/17 20:14:39 python3 preprocess.py > WeiboTrainingData.inl
+ 1505  19/04/17 20:14:39 vim WeiboTrainingData.in
+ 1506  19/04/17 20:14:39 vim preprocess.py 
+ 1507  19/04/17 20:14:39 python3 preprocess.py
+ 1508  19/04/17 20:14:39 ls
+ 1509  19/04/17 20:14:39 vim WeiboTrainingData.in
+ 1510  19/04/17 20:14:39 vim preprocess.py 
+ 1511  19/04/17 20:14:39 python3 preprocess.py
+ 1512  19/04/17 20:14:39 ls
+ 1513  19/04/17 20:14:39 vim WeiboTrainingData.inl 
+ 1514  19/04/17 20:14:39 mv WeiboTrainingData.inl WeiboTrainingData.in
+ 1515  19/04/17 20:14:39 ls
+ 1516  19/04/17 20:14:39 vim WeiboTrainingData.in 
+ 1517  19/04/17 20:14:39 ls
+ 1518  19/04/17 20:14:39 vim corpus.txt 
+ 1519  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1520  19/04/17 20:14:39 vim WeiboTrainingData.in 
+ 1521  19/04/17 20:14:39 vim emotionlabel.tsv 
+ 1522  19/04/17 20:14:39 cd ..
+ 1523  19/04/17 20:14:39 ls
+ 1524  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1525  19/04/17 20:14:39 ls
+ 1526  19/04/17 20:14:39 cd data/
+ 1527  19/04/17 20:14:39 ls
+ 1528  19/04/17 20:14:39 cd rt-polaritydata/
+ 1529  19/04/17 20:14:39 lks
+ 1530  19/04/17 20:14:39 ls
+ 1531  19/04/17 20:14:39 cp ../../../data/WeiboEmotionLabel.tsv ./
+ 1532  19/04/17 20:14:39 ls
+ 1533  19/04/17 20:14:39 rm WeiboEmotionLabel.tsv 
+ 1534  19/04/17 20:14:39 cp ../../../data/WeiboTrainingData.in ./
+ 1535  19/04/17 20:14:39 ls
+ 1536  19/04/17 20:14:39 vim WeiboTrainingData.in 
+ 1537  19/04/17 20:14:39 cd ..
+ 1538  19/04/17 20:14:39 ls
+ 1539  19/04/17 20:14:39 cd ..
+ 1540  19/04/17 20:14:39 ls
+ 1541  19/04/17 20:14:39 cd runs/
+ 1542  19/04/17 20:14:39 ls
+ 1543  19/04/17 20:14:39 mv 1491372940/ emotionwordmodel
+ 1544  19/04/17 20:14:39 ls
+ 1545  19/04/17 20:14:39 cd ..
+ 1546  19/04/17 20:14:39 ls
+ 1547  19/04/17 20:14:39 vim train.py 
+ 1548  19/04/17 20:14:39 ls
+ 1549  19/04/17 20:14:39 ls data/rt-polaritydata/
+ 1550  19/04/17 20:14:39 vim train.py 
+ 1551  19/04/17 20:14:39 ls
+ 1552  19/04/17 20:14:39 python3 train.py 
+ 1553  19/04/17 20:14:39 ls
+ 1554  19/04/17 20:14:39 vim eval.py 
+ 1555  19/04/17 20:14:39 python3 eval.py --checkpoint_dir="runs/1491554767/checkpoints/"
+ 1556  19/04/17 20:14:39 ls
+ 1557  19/04/17 20:14:39 ls runs/1491554767/prediction.csv 
+ 1558  19/04/17 20:14:39 vim runs/1491554767/prediction.csv 
+ 1559  19/04/17 20:14:39 cd runs/1491554767/
+ 1560  19/04/17 20:14:39 ls
+ 1561  19/04/17 20:14:39 pwd
+ 1562  19/04/17 20:14:39 ls
+ 1563  19/04/17 20:14:39 cd ../
+ 1564  19/04/17 20:14:39 cd ..
+ 1565  19/04/17 20:14:39 ls
+ 1566  19/04/17 20:14:39 vim ../data/preprocess.py 
+ 1567  19/04/17 20:14:39 ls
+ 1568  19/04/17 20:14:39 cd /home/nichy/yoyu/code/fondue/spotlight/opinion
+ 1569  19/04/17 20:14:39 ls
+ 1570  19/04/17 20:14:39 cp ~/yoyu/spotlight/emotion/cnn-text-classification-tf/runs/1491554767/checkpoints/model-24600.* runs/emotion/
+ 1571  19/04/17 20:14:39 mkdir runs/emotion
+ 1572  19/04/17 20:14:39 cp ~/yoyu/spotlight/emotion/cnn-text-classification-tf/runs/1491554767/checkpoints/model-24600.* runs/emotion/
+ 1573  19/04/17 20:14:39 ls /run/emo
+ 1574  19/04/17 20:14:39 ls runs/emotion/
+ 1575  19/04/17 20:14:39 cp ~/yoyu/spotlight/emotion/cnn-text-classification-tf/runs/1491554767/vocab emotion-vocagb
+ 1576  19/04/17 20:14:39 ls
+ 1577  19/04/17 20:14:39 mv emotion-vocagb emotion-vocab
+ 1578  19/04/17 20:14:39 ls
+ 1579  19/04/17 20:14:39 vim run.sh 
+ 1580  19/04/17 20:14:39 mv emotion-vocab emovocab
+ 1581  19/04/17 20:14:39 ls
+ 1582  19/04/17 20:14:39 ./run.sh 
+ 1583  19/04/17 20:14:39 vim terminalout 
+ 1584  19/04/17 20:14:39 ls
+ 1585  19/04/17 20:14:39 ls runs/emotion/
+ 1586  19/04/17 20:14:39 vim runs/emotion/model-24600.data-00000-of-00001 
+ 1587  19/04/17 20:14:39 vim runs/emotion/model-24600.index 
+ 1588  19/04/17 20:14:39 ls runs/2class/
+ 1589  19/04/17 20:14:39 ls runs/2class/checkpoints/
+ 1590  19/04/17 20:14:39 cd runs/emotion/
+ 1591  19/04/17 20:14:39 ls
+ 1592  19/04/17 20:14:39 mkdir checkpoints
+ 1593  19/04/17 20:14:39 ls
+ 1594  19/04/17 20:14:39 mv model-24600.* checkpoints/
+ 1595  19/04/17 20:14:39 ls
+ 1596  19/04/17 20:14:39 cd ..
+ 1597  19/04/17 20:14:39 ls
+ 1598  19/04/17 20:14:39 cd ..
+ 1599  19/04/17 20:14:39 ls
+ 1600  19/04/17 20:14:39 vim runs/2class/checkpoints/checkpoint 
+ 1601  19/04/17 20:14:39 cp ~/yoyu/spotlight/emotion/cnn-text-classification-tf/runs/1491554767/checkpoints/checkpoint ./
+ 1602  19/04/17 20:14:39 ls
+ 1603  19/04/17 20:14:39 mv checkpoint runs/emotion/checkpoints/
+ 1604  19/04/17 20:14:39 vim runs/emotion/checkpoints/checkpoint 
+ 1605  19/04/17 20:14:39 ls
+ 1606  19/04/17 20:14:39 ./run.sh 
+ 1607  19/04/17 20:14:39 ls
+ 1608  19/04/17 20:14:39 zip runs/
+ 1609  19/04/17 20:14:39 ls
+ 1610  19/04/17 20:14:39 man zip
+ 1611  19/04/17 20:14:39 mv out out.bak
+ 1612  19/04/17 20:14:39 mv terminalout terminalout.bak
+ 1613  19/04/17 20:14:39 zip -r runs/
+ 1614  19/04/17 20:14:39 zip -r runs runs/
+ 1615  19/04/17 20:14:39 ls
+ 1616  19/04/17 20:14:39 mv runs models
+ 1617  19/04/17 20:14:39 ls
+ 1618  19/04/17 20:14:39 vim .gitignore 
+ 1619  19/04/17 20:14:39 ls
+ 1620  19/04/17 20:14:39 vim run.sh 
+ 1621  19/04/17 20:14:39 mv models/ runs
+ 1622  19/04/17 20:14:39 ls
+ 1623  19/04/17 20:14:39 mv runs.zip models.zip
+ 1624  19/04/17 20:14:39 ls
+ 1625  19/04/17 20:14:39 unzip models.zip 
+ 1626  19/04/17 20:14:39 ls
+ 1627  19/04/17 20:14:39 ls runs/
+ 1628  19/04/17 20:14:39 ls
+ 1629  19/04/17 20:14:39 mv runs/ runs.bak
+ 1630  19/04/17 20:14:39 ls
+ 1631  19/04/17 20:14:39 unzip models.zip 
+ 1632  19/04/17 20:14:39 ls
+ 1633  19/04/17 20:14:39 ls runs
+ 1634  19/04/17 20:14:39 ls
+ 1635  19/04/17 20:14:39 rm runs -rf
+ 1636  19/04/17 20:14:39 ls
+ 1637  19/04/17 20:14:39 python
+ 1638  19/04/17 20:14:39 ls
+ 1639  19/04/17 20:14:39 ls runs
+ 1640  19/04/17 20:14:39 ls
+ 1641  19/04/17 20:14:39 rm runs -rf
+ 1642  19/04/17 20:14:39 ls
+ 1643  19/04/17 20:14:39 mv runs.bak/ models
+ 1644  19/04/17 20:14:39 ls
+ 1645  19/04/17 20:14:39 rm models.zip 
+ 1646  19/04/17 20:14:39 zip -r models/ models
+ 1647  19/04/17 20:14:39 ls
+ 1648  19/04/17 20:14:39 mv models/ runs
+ 1649  19/04/17 20:14:39 ls
+ 1650  19/04/17 20:14:39 ls runs/
+ 1651  19/04/17 20:14:39 ls runs/2class/
+ 1652  19/04/17 20:14:39 ls runs/2class/checkpoints/
+ 1653  19/04/17 20:14:39 ls
+ 1654  19/04/17 20:14:39 mv runs/ models
+ 1655  19/04/17 20:14:39 ls
+ 1656  19/04/17 20:14:39 zip -r models models
+ 1657  19/04/17 20:14:39 ls
+ 1658  19/04/17 20:14:39 mv models runs
+ 1659  19/04/17 20:14:39 ls
+ 1660  19/04/17 20:14:39 mv vocab runs/2class/
+ 1661  19/04/17 20:14:39 mv emovocab runs/emotion/
+ 1662  19/04/17 20:14:39 ls
+ 1663  19/04/17 20:14:39 cd runs/
+ 1664  19/04/17 20:14:39 ls
+ 1665  19/04/17 20:14:39 cd emotion/
+ 1666  19/04/17 20:14:39 ls
+ 1667  19/04/17 20:14:39 mv emovocab vocab
+ 1668  19/04/17 20:14:39 ls
+ 1669  19/04/17 20:14:39 cd ..
+ 1670  19/04/17 20:14:39 ls
+ 1671  19/04/17 20:14:39 cd ..
+ 1672  19/04/17 20:14:39 ls
+ 1673  19/04/17 20:14:39 rm models.zip 
+ 1674  19/04/17 20:14:39 ls
+ 1675  19/04/17 20:14:39 mv runs/ models
+ 1676  19/04/17 20:14:39 zip -r models models
+ 1677  19/04/17 20:14:39 ls
+ 1678  19/04/17 20:14:39 mv models runs
+ 1679  19/04/17 20:14:39 ls
+ 1680  19/04/17 20:14:39 vim run.sh 
+ 1681  19/04/17 20:14:39 ls runs/
+ 1682  19/04/17 20:14:39 vim run.sh 
+ 1683  19/04/17 20:14:39 ls
+ 1684  19/04/17 20:14:39 ./run.sh 
+ 1685  19/04/17 20:14:39 diff terminalout terminalout.bak 
+ 1686  19/04/17 20:14:39 vim terminalout
+ 1687  19/04/17 20:14:39 diff out out.bak 
+ 1688  19/04/17 20:14:39 rm out.bak 
+ 1689  19/04/17 20:14:39 rm terminalout.bak 
+ 1690  19/04/17 20:14:39 ls
+ 1691  19/04/17 20:14:39 ./run.sh 
+ 1692  19/04/17 20:14:39 vim terminalout 
+ 1693  19/04/17 20:14:39 vim out 
+ 1694  19/04/17 20:14:39 ./run.sh 
+ 1695  19/04/17 20:14:39 vim terminalout 
+ 1696  19/04/17 20:14:39 ./run.sh 
+ 1697  19/04/17 20:14:39 vim terminalout 
+ 1698  19/04/17 20:14:39 vim out 
+ 1699  19/04/17 20:14:39 ./run.sh 
+ 1700  19/04/17 20:14:39 vim out 
+ 1701  19/04/17 20:14:39 ./run.sh 
+ 1702  19/04/17 20:14:39 vim out 
+ 1703  19/04/17 20:14:39 ./run.sh 
+ 1704  19/04/17 20:14:39 vim out 
+ 1705  19/04/17 20:14:39 vim terminalout 
+ 1706  19/04/17 20:14:39 s
+ 1707  19/04/17 20:14:39 ls
+ 1708  19/04/17 20:14:39 rm models -rf
+ 1709  19/04/17 20:14:39 ls
+ 1710  19/04/17 20:14:39 vim terminalout 
+ 1711  19/04/17 20:14:39 vim out 
+ 1712  19/04/17 20:14:39 vim terminalout 
+ 1713  19/04/17 20:14:39 ./run.sh 
+ 1714  19/04/17 20:14:39 vim out 
+ 1715  19/04/17 20:14:39 vim terminalout 
+ 1716  19/04/17 20:14:39 ./run.sh 
+ 1717  19/04/17 20:14:39 vim terminalout 
+ 1718  19/04/17 20:14:39 ./run.sh 
+ 1719  19/04/17 20:14:39 vim terminalout 
+ 1720  19/04/17 20:14:39 ./run.sh 
+ 1721  19/04/17 20:14:39 vim terminalout 
+ 1722  19/04/17 20:14:39 vim out 
+ 1723  19/04/17 20:14:39 pwd
+ 1724  19/04/17 20:14:39 vim out 
+ 1725  19/04/17 20:14:39 ls
+ 1726  19/04/17 20:14:39 cd ~/yoyu/spotlight/
+ 1727  19/04/17 20:14:39 ls
+ 1728  19/04/17 20:14:39 cd emotion/
+ 1729  19/04/17 20:14:39 ls
+ 1730  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1731  19/04/17 20:14:39 ls
+ 1732  19/04/17 20:14:39 vim data/rt-polaritydata/WeiboTrainingData.in 
+ 1733  19/04/17 20:14:39 ls
+ 1734  19/04/17 20:14:39 vim ../data/preprocess.py 
+ 1735  19/04/17 20:14:39 vim data/rt-polaritydata/WeiboTrainingData.in 
+ 1736  19/04/17 20:14:39 awk -F "\t" '{ print $1 }' data/rt-polaritydata/WeiboTrainingData.in 
+ 1737  19/04/17 20:14:39 awk -F "\t" '$3==1' data/rt-polaritydata/WeiboTrainingData.in > happy.in
+ 1738  19/04/17 20:14:39 vim happy.in 
+ 1739  19/04/17 20:14:39 vim data/rt-polaritydata/WeiboTrainingData.in 
+ 1740  19/04/17 20:14:39 vim happy.in 
+ 1741  19/04/17 20:14:39 ls
+ 1742  19/04/17 20:14:39 ls data
+ 1743  19/04/17 20:14:39 ls
+ 1744  19/04/17 20:14:39 cd ..
+ 1745  19/04/17 20:14:39 ls
+ 1746  19/04/17 20:14:39 cd data/
+ 1747  19/04/17 20:14:39 ls
+ 1748  19/04/17 20:14:39 vim 20170406review.in 
+ 1749  19/04/17 20:14:39 vim crawled-reviews-20161101-20170401 
+ 1750  19/04/17 20:14:39 pwd
+ 1751  19/04/17 20:14:39 cp crawled-reviews-20161101-20170401 happy
+ 1752  19/04/17 20:14:39 vim happy 
+ 1753  19/04/17 20:14:39 ls
+ 1754  19/04/17 20:14:39 vim happy 
+ 1755  19/04/17 20:14:39 ls
+ 1756  19/04/17 20:14:39 vim preprocess.py 
+ 1757  19/04/17 20:14:39 ./preprocess.py > happy.out
+ 1758  19/04/17 20:14:39 python3 preprocess.py > happy.out
+ 1759  19/04/17 20:14:39 vim happy.out 
+ 1760  19/04/17 20:14:39 ls
+ 1761  19/04/17 20:14:39 vim WeiboEmotionLabel.tsv 
+ 1762  19/04/17 20:14:39 awk -F "\t" '$3 == 0' WeiboTrainingData.in > WeiboAndManualLabel.in
+ 1763  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1764  19/04/17 20:14:39 cat happy.out >> WeiboAndManualLabel.in 
+ 1765  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1766  19/04/17 20:14:39 awk -F "\t" '$3==1' WeiboAndManualLabel.in 
+ 1767  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1768  19/04/17 20:14:39 ls
+ 1769  19/04/17 20:14:39 vim crawled-reviews-20161101-20170401 
+ 1770  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboTrainingData.in | wc -l
+ 1771  19/04/17 20:14:39 awk -F "\t" '$4==1' WeiboTrainingData.in | wc -l
+ 1772  19/04/17 20:14:39 awk -F "\t" '$6==1' WeiboTrainingData.in | wc -l
+ 1773  19/04/17 20:14:39 cp crawled-reviews-20161101-20170401 hate
+ 1774  19/04/17 20:14:39 vim hate 
+ 1775  19/04/17 20:14:39 vim preprocess.py 
+ 1776  19/04/17 20:14:39 python3 preprocess.py > hate.out
+ 1777  19/04/17 20:14:39 vim preprocess.py 
+ 1778  19/04/17 20:14:39 python3 preprocess.py > hate.out
+ 1779  19/04/17 20:14:39 vim hate.out 
+ 1780  19/04/17 20:14:39 ls
+ 1781  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboTrainingData.in 
+ 1782  19/04/17 20:14:39 vim hate.out 
+ 1783  19/04/17 20:14:39 cat hate.out >> WeiboAndManualLabel.in 
+ 1784  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1785  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboAndManualLabel.in | wc -l
+ 1786  19/04/17 20:14:39 ls
+ 1787  19/04/17 20:14:39 cp crawled-reviews-20161101-20170401 angry
+ 1788  19/04/17 20:14:39 vim angry 
+ 1789  19/04/17 20:14:39 vim preprocess.py 
+ 1790  19/04/17 20:14:39 python3 preprocess.py > angry.out
+ 1791  19/04/17 20:14:39 vim angry.out 
+ 1792  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboAndManualLabel.in | wc -l
+ 1793  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboAndManualLabel.in
+ 1794  19/04/17 20:14:39 awk -F "\t" '$4==1' WeiboAndManualLabel.in
+ 1795  19/04/17 20:14:39 awk -F "\t" '$4==1' WeiboAndManualLabel.in | wc -l
+ 1796  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboAndManualLabel.in | wc -l
+ 1797  19/04/17 20:14:39 vim angry.out 
+ 1798  19/04/17 20:14:39 cat angry.out >> WeiboAndManualLabel.in 
+ 1799  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboAndManualLabel.in | wc -l
+ 1800  19/04/17 20:14:39 awk -F "\t" '$4==1' WeiboAndManualLabel.in | wc -l
+ 1801  19/04/17 20:14:39 ls
+ 1802  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1803  19/04/17 20:14:39 ls
+ 1804  19/04/17 20:14:39 cp WeiboAndManualLabel.in ../cnn-text-classification-tf/data/rt-polaritydata/
+ 1805  19/04/17 20:14:39 ls
+ 1806  19/04/17 20:14:39 cd ..
+ 1807  19/04/17 20:14:39 ls
+ 1808  19/04/17 20:14:39 cd cnn-text-classification-tf/n
+ 1809  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1810  19/04/17 20:14:39 ls
+ 1811  19/04/17 20:14:39 vim train.py 
+ 1812  19/04/17 20:14:39 ls
+ 1813  19/04/17 20:14:39 ls runs/
+ 1814  19/04/17 20:14:39 cd runs/
+ 1815  19/04/17 20:14:39 ls
+ 1816  19/04/17 20:14:39 mv 1491554767/ emotionweibo
+ 1817  19/04/17 20:14:39 ls
+ 1818  19/04/17 20:14:39 cd ..
+ 1819  19/04/17 20:14:39 ls
+ 1820  19/04/17 20:14:39 python3 train.py 
+ 1821  19/04/17 20:14:39 ls
+ 1822  19/04/17 20:14:39 pwd
+ 1823  19/04/17 20:14:39 ls runs/1491976621/
+ 1824  19/04/17 20:14:39 ls
+ 1825  19/04/17 20:14:39 vim data/rt-polaritydata/WeiboAndManualLabel.in 
+ 1826  19/04/17 20:14:39 ls
+ 1827  19/04/17 20:14:39 cd data/rt-polaritydata/
+ 1828  19/04/17 20:14:39 ls
+ 1829  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1830  19/04/17 20:14:39 awk -F "\t" '$3==1' WeiboAndManualLabel.in > happy.in
+ 1831  19/04/17 20:14:39 vim happy.in 
+ 1832  19/04/17 20:14:39 awk -F "\t" '$3==1' WeiboAndManualLabel.in > happy.in
+ 1833  19/04/17 20:14:39 awk -F "\t" '$3!=1' WeiboAndManualLabel.in > WeiboAndManualLabel.in
+ 1834  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1835  19/04/17 20:14:39 ls
+ 1836  19/04/17 20:14:39 cp ../../../data/WeiboAndManualLabel.in ./
+ 1837  19/04/17 20:14:39 ls
+ 1838  19/04/17 20:14:39 awk -F "\t" '$3!=1' WeiboAndManualLabel.in > weibo.in
+ 1839  19/04/17 20:14:39 vim weibo.in 
+ 1840  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1841  19/04/17 20:14:39 awk 'NR%5==0' happy.in >> weibo.in 
+ 1842  19/04/17 20:14:39 ls
+ 1843  19/04/17 20:14:39 vim weibo.in 
+ 1844  19/04/17 20:14:39 ls
+ 1845  19/04/17 20:14:39 mv weibo.in WeiboAndManualLabel.in 
+ 1846  19/04/17 20:14:39 ls
+ 1847  19/04/17 20:14:39 vim happy.in 
+ 1848  19/04/17 20:14:39 awk -F "\t" '$2==1' WeiboAndManualLabel.in | wc -l
+ 1849  19/04/17 20:14:39 awk -F "\t" '$6==1' WeiboAndManualLabel.in | wc -l
+ 1850  19/04/17 20:14:39 awk -F "\t" '$6==1' WeiboAndManualLabel.in > unhappy.in
+ 1851  19/04/17 20:14:39 awk -F "\t" '$6!=1' WeiboAndManualLabel.in > weibo.in
+ 1852  19/04/17 20:14:39 vim unhappy.in 
+ 1853  19/04/17 20:14:39 awk -F 'NR%2==0' unhappy.in >> weibo.in 
+ 1854  19/04/17 20:14:39 awk 'NR%2==0' unhappy.in >> weibo.in 
+ 1855  19/04/17 20:14:39 vim weibo.in 
+ 1856  19/04/17 20:14:39 mv weibo.in WeiboAndManualLabel.in 
+ 1857  19/04/17 20:14:39 ls
+ 1858  19/04/17 20:14:39 cd ..
+ 1859  19/04/17 20:14:39 ls
+ 1860  19/04/17 20:14:39 cd ..
+ 1861  19/04/17 20:14:39 ls
+ 1862  19/04/17 20:14:39 vim train.py 
+ 1863  19/04/17 20:14:39 python3 train.py 
+ 1864  19/04/17 20:14:39 ls
+ 1865  19/04/17 20:14:39 pwd
+ 1866  19/04/17 20:14:39 ls runs/
+ 1867  19/04/17 20:14:39 ls
+ 1868  19/04/17 20:14:39 python3 eval.py --checkpoint_dir="runs/1491985413/checkpoints/"
+ 1869  19/04/17 20:14:39 vim runs/1491985413/prediction.csv 
+ 1870  19/04/17 20:14:39 ls
+ 1871  19/04/17 20:14:39 cd runs/
+ 1872  19/04/17 20:14:39 ls
+ 1873  19/04/17 20:14:39 ls emotionweibo/
+ 1874  19/04/17 20:14:39 ls
+ 1875  19/04/17 20:14:39 ls 1491976621/
+ 1876  19/04/17 20:14:39 ls 1491976621/checkpoints/
+ 1877  19/04/17 20:14:39 ls
+ 1878  19/04/17 20:14:39 mv 1491985413/ emotionlittlehappy
+ 1879  19/04/17 20:14:39 ls
+ 1880  19/04/17 20:14:39 pwd
+ 1881  19/04/17 20:14:39 ls
+ 1882  19/04/17 20:14:39 mv 1491976621/ emotionfunhappy
+ 1883  19/04/17 20:14:39 ls
+ 1884  19/04/17 20:14:39 cd ..
+ 1885  19/04/17 20:14:39 ls
+ 1886  19/04/17 20:14:39 cd ..
+ 1887  19/04/17 20:14:39 ls
+ 1888  19/04/17 20:14:39 cd data/
+ 1889  19/04/17 20:14:39 ls
+ 1890  19/04/17 20:14:39 cd ..
+ 1891  19/04/17 20:14:39 ls
+ 1892  19/04/17 20:14:39 cd data/
+ 1893  19/04/17 20:14:39 ls
+ 1894  19/04/17 20:14:39 vim WeiboAndManualLabel.in 
+ 1895  19/04/17 20:14:39 awk -F "\t" '$2==1' WeiboAndManualLabel.in 
+ 1896  19/04/17 20:14:39 awk -F "\t" '$2==1' WeiboAndManualLabel.in | wc -l
+ 1897  19/04/17 20:14:39 awk -F "\t" '$2==3' WeiboAndManualLabel.in | wc -l
+ 1898  19/04/17 20:14:39 awk -F "\t" '$2==1' WeiboAndManualLabel.in | wc -l
+ 1899  19/04/17 20:14:39 ls
+ 1900  19/04/17 20:14:39 mkdir traindata
+ 1901  19/04/17 20:14:39 cp WeiboAndManualLabel.in traindata/
+ 1902  19/04/17 20:14:39 ls
+ 1903  19/04/17 20:14:39 cd traindata/
+ 1904  19/04/17 20:14:39 ls
+ 1905  19/04/17 20:14:39 awk -F "\t" '$2==1' | wc -l
+ 1906  19/04/17 20:14:39 awk -F "\t" '$2==1' WeiboAndManualLabel.in | wc -l
+ 1907  19/04/17 20:14:39 awk -F "\t" '$2==1' WeiboAndManualLabel.in > other
+ 1908  19/04/17 20:14:39 awk -F "\t" '$3==4' WeiboAndManualLabel.in > 
+ 1909  19/04/17 20:14:39 vim happy 
+ 1910  19/04/17 20:14:39 awk -F "\t" '$4==1' WeiboAndManualLabel.in > angry
+ 1911  19/04/17 20:14:39 vim angry 
+ 1912  19/04/17 20:14:39 awk -F "\t" '$5==1' WeiboAndManualLabel.in > hate
+ 1913  19/04/17 20:14:39 awk -F "\t" '$6==1' WeiboAndManualLabel.in > sad
+ 1914  19/04/17 20:14:39 ls
+ 1915  19/04/17 20:14:39 vim sad 
+ 1916  19/04/17 20:14:39 awk -F "\t" '$7==1' WeiboAndManualLabel.in > afraid
+ 1917  19/04/17 20:14:39 awk -F "\t" '$8==1' WeiboAndManualLabel.in > jingqi
+ 1918  19/04/17 20:14:39 vim jingqi 
+ 1919  19/04/17 20:14:39 vim other 
+ 1920  19/04/17 20:14:39 vim happy 
+ 1921  19/04/17 20:14:39 vim sad 
+ 1922  19/04/17 20:14:39 awk 'NR%2==0' sad > sad.in
+ 1923  19/04/17 20:14:39 vim sad.in 
+ 1924  19/04/17 20:14:39 vim afraid 
+ 1925  19/04/17 20:14:39 vim hate 
+ 1926  19/04/17 20:14:39 ls
+ 1927  19/04/17 20:14:39 cd ..
+ 1928  19/04/17 20:14:39 ls
+ 1929  19/04/17 20:14:39 awk -F "\t" '$3==1' WeiboTrainingData.in > weibohappy
+ 1930  19/04/17 20:14:39 vim weibohappy 
+ 1931  19/04/17 20:14:39 awk 'NR%4==0' weibohappy > weibohappy.sample
+ 1932  19/04/17 20:14:39 vim weibohappy.sample 
+ 1933  19/04/17 20:14:39 awk 'NR%8==0' weibohappy > weibohappy.sample
+ 1934  19/04/17 20:14:39 vim weibohappy.sample 
+ 1935  19/04/17 20:14:39 cat weibohappy.sample >> traindata/happy 
+ 1936  19/04/17 20:14:39 cd traindata/
+ 1937  19/04/17 20:14:39 vim happy 
+ 1938  19/04/17 20:14:39 cat happy other angry hate sad.in afraid jingqi > train.in
+ 1939  19/04/17 20:14:39 vim train.in 
+ 1940  19/04/17 20:14:39 cd ..
+ 1941  19/04/17 20:14:39 ls
+ 1942  19/04/17 20:14:39 cd ..
+ 1943  19/04/17 20:14:39 ls
+ 1944  19/04/17 20:14:39 cd cnn-text-classification-tf/
+ 1945  19/04/17 20:14:39 ls
+ 1946  19/04/17 20:14:39 cp ../data/traindata/train.in data/rt-polaritydata/
+ 1947  19/04/17 20:14:39 vim train.py 
+ 1948  19/04/17 20:14:39 ls runs/
+ 1949  19/04/17 20:14:39 python3 train.py 
+ 1950  19/04/17 20:14:39 pwd
+ 1951  19/04/17 20:14:39 ls
+ 1952  19/04/17 20:14:39 python3 eval.py --checkpoint_dir="./runs/1491995879/checkpoints/"
+ 1953  19/04/17 20:14:39 vim runs/1491995879/prediction.csv 
+ 1954  19/04/17 20:14:39 pwd
+ 1955  19/04/17 20:14:39 cd runs/1491995879/
+ 1956  19/04/17 20:14:39 pwd
+ 1957  19/04/17 20:14:39 ls
+ 1958  19/04/17 20:14:39 cd ..
+ 1959  19/04/17 20:14:39 ls
+ 1960  19/04/17 20:14:39 rm emotionfunhappy/ -rf
+ 1961  19/04/17 20:14:39 rm emotionlittlehappy/ -rf
+ 1962  19/04/17 20:14:39 rm emotionweibo/ -rf
+ 1963  19/04/17 20:14:39 rm emotionwordmodel/ -rf
+ 1964  19/04/17 20:14:39 ls
+ 1965  19/04/17 20:14:39 mv 1491995879/ emotion
+ 1966  19/04/17 20:14:39 ls
+ 1967  19/04/17 20:14:39 cd ..
+ 1968  19/04/17 20:14:39 ls
+ 1969  19/04/17 20:14:39 vim data/rt-polaritydata/train.in 
+ 1970  19/04/17 20:14:39 vim data_helpers.py 
+ 1971  19/04/17 20:14:39 ls
+ 1972  19/04/17 20:14:39 vim text_cnn.py 
+ 1973  19/04/17 20:14:39 ls
+ 1974  19/04/17 20:14:39 vim text_cnn.py 
+ 1975  19/04/17 20:14:39 vim train.py 
+ 1976  19/04/17 20:14:39 ls
+ 1977  19/04/17 20:14:39 cd guazho/
+ 1978  19/04/17 20:14:39 ls
+ 1979  19/04/17 20:14:39 mkdir poem
+ 1980  19/04/17 20:14:39 ls
+ 1981  19/04/17 20:14:39 cd poem/
+ 1982  19/04/17 20:14:39 sudo apt-get install msodbcsql
+ 1983  19/04/17 20:14:39 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+ 1984  19/04/17 20:14:39 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql.list
+ 1985  19/04/17 20:14:39 sudo curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+ 1986  19/04/17 20:14:39 sudo su
+ 1987  19/04/17 20:14:39 sudo apt-get update
+ 1988  19/04/17 20:14:39 sudo apt-get install msodbcsql mssql-tools unixodbc-dev
+ 1989  19/04/17 20:14:39 sudp apt-get install libc6
+ 1990  19/04/17 20:14:39 sudo apt-get install libc6
+ 1991  19/04/17 20:14:39 sudp apt-get install l
+ 1992  19/04/17 20:14:39 sudo apt-get install msodbcsql mssql-tools unixodbc-dev
+ 1993  19/04/17 20:14:39 sudo apt-get update
+ 1994  19/04/17 20:14:39 sudo apt-get install msodbcsql mssql-tools unixodbc-dev
+ 1995  19/04/17 20:14:39 sudo apt-get install libstcdc++6
+ 1996  19/04/17 20:14:39 sudo apt-get install libstcdc++
+ 1997  19/04/17 20:14:39 sudo apt-get install unixodbc
+ 1998  19/04/17 20:14:39 sudo apt-get install msodbcsql mssql-tools unixodbc-dev
+ 1999  19/04/17 20:14:39 sudo apt-get install msodbcsql
+ 2000  19/04/17 20:15:24 ls
+ 2001  19/04/17 20:15:30 lls
+ 2002  19/04/17 20:15:39 ls
+ 2003  19/04/17 20:16:01 nvidia-smi 
+ 2004  19/04/17 20:18:49 python
+ 2005  19/04/17 20:45:04 ls
+ 2006  19/04/17 20:45:06 cd yoyu/
+ 2007  19/04/17 20:45:06 ls
+ 2008  19/04/17 20:45:08 cd spotlight/
+ 2009  19/04/17 20:45:08 ls
+ 2010  19/04/17 20:45:10 cd classifier/
+ 2011  19/04/17 20:45:11 ls
+ 2012  19/04/17 20:45:12 cd cnn-text-classification-tf/
+ 2013  19/04/17 20:45:13 ls
+ 2014  19/04/17 20:45:13 cd data/
+ 2015  19/04/17 20:45:14 ls
+ 2016  19/04/17 20:45:15 cd predict/
+ 2017  19/04/17 20:45:15 ls
+ 2018  19/04/17 20:45:18 vim predict.in 
+ 2019  19/04/17 20:47:16 ls
+ 2020  19/04/17 20:47:35 pwd
+ 2021  19/04/17 20:48:05 ls
+ 2022  19/04/17 20:48:17 cat TestClass.tsv | wc -l
+ 2023  19/04/17 20:49:21 awk -F 'NR % 800' TestClass.tsv > TestSample.tsv
+ 2024  19/04/17 20:49:33 awk 'NR % 800' TestClass.tsv > TestSample.tsv
+ 2025  19/04/17 20:49:36 vim TestSample.tsv 
+ 2026  19/04/17 20:49:54 ls
+ 2027  19/04/17 20:50:09 awk -F "\t" '{ print $1 }' TestSample.tsv > predict.in 
+ 2028  19/04/17 20:50:13 vim predict.in 
+ 2029  19/04/17 20:50:25 vim TestSample.tsv 
+ 2030  19/04/17 20:50:39 cat TestClass.tsv | wc -l
+ 2031  19/04/17 20:50:49 awk 'NR % 800==0' TestClass.tsv > TestSample.tsv
+ 2032  19/04/17 20:50:53 awk -F "\t" '{ print $1 }' TestSample.tsv > predict.in 
+ 2033  19/04/17 20:50:55 vim predict.in 
+ 2034  19/04/17 20:51:02 cd ..
+ 2035  19/04/17 20:51:02 ls
+ 2036  19/04/17 20:51:03 cd ..
+ 2037  19/04/17 20:51:04 sl
+ 2038  19/04/17 20:51:06 ls
+ 2039  19/04/17 20:51:22 ls runs/1492600849/
+ 2040  19/04/17 20:51:24 ls runs/1492600849/checkpoints/
+ 2041  19/04/17 20:51:31 ls
+ 2042  19/04/17 20:51:48 python3 eval.py --checkpoint_dir="./runs/1492600849/checkpoints/"
+ 2043  19/04/17 20:57:09 ls
+ 2044  19/04/17 21:01:58 vim eval.py 
+ 2045  19/04/17 21:02:43 python3 eval.py --checkpoint_dir="./runs/1492600849/checkpoints/"
+ 2046  19/04/17 21:03:00 ls
+ 2047  19/04/17 21:03:13 ls runs/1492600849/checkpoints/ -lh
+ 2048  19/04/17 21:03:37 vim eval.py 
+ 2049  19/04/17 21:04:25 python3 eval.py --checkpoint_dir="./runs/1492600849/checkpoints/"
+ 2050  19/04/17 21:04:37 ls
+ 2051  19/04/17 21:04:39 vim eval.py 
+ 2052  20/04/17 11:05:18 ls
+ 2053  20/04/17 11:18:45 vim text_cnn.py 
+ 2054  20/04/17 12:13:09 ls
+ 2055  20/04/17 12:13:11 cd ~/
+ 2056  20/04/17 12:13:11 ls
+ 2057  20/04/17 12:13:14 cd yoyu/
+ 2058  20/04/17 12:13:14 ls
+ 2059  20/04/17 12:13:16 cd code/
+ 2060  20/04/17 12:13:17 cd fondue/
+ 2061  20/04/17 12:13:18 ls
+ 2062  20/04/17 12:16:26 cd deeplearning/
+ 2063  20/04/17 12:16:27 ls
+ 2064  20/04/17 12:16:28 cd src/
+ 2065  20/04/17 12:16:29 ls
+ 2066  20/04/17 12:16:44 cd ..
+ 2067  20/04/17 12:16:45 ls
+ 2068  20/04/17 12:16:46 ls data/
+ 2069  20/04/17 12:16:49 vim .gitignore 
+ 2070  20/04/17 12:16:51 ls
+ 2071  20/04/17 12:16:53 cd ..
+ 2072  20/04/17 12:16:53 ls
+ 2073  20/04/17 12:16:55 git add .
+ 2074  20/04/17 12:17:07 git commit -m "sync"
+ 2075  20/04/17 12:17:16 cd spotlight/
+ 2076  20/04/17 12:17:17 ls
+ 2077  20/04/17 12:17:18 vim .gitignore 
+ 2078  20/04/17 12:17:52 git rm opinion/models.zip 
+ 2079  20/04/17 12:17:54 ls
+ 2080  20/04/17 12:17:57 git add -A
+ 2081  20/04/17 12:18:02 git commit -m "rm zip"
+ 2082  20/04/17 12:18:04 ls
+ 2083  20/04/17 12:18:07 git push origin master
+ 2084  20/04/17 12:18:52 ls
+ 2085  20/04/17 12:18:55 git status
+ 2086  20/04/17 12:19:52 git reset HEAD~
+ 2087  20/04/17 12:20:34 vim .gitignore 
+ 2088  20/04/17 12:20:45 git commit -m "sync"
+ 2089  20/04/17 12:20:56 git add .
+ 2090  20/04/17 12:20:58 git commit -m "sync"
+ 2091  20/04/17 12:22:14 git push origin master
+ 2092  20/04/17 12:22:37 vim opinion/run.sh 
+ 2093  20/04/17 12:22:44 vim opinion/optfidf.py
+ 2094  20/04/17 12:22:54 vim opinion/MineOpinionForSPCard.py 
+ 2095  20/04/17 12:31:04 ls
+ 2096  20/04/17 12:31:08 ls opinion/
+ 2097  20/04/17 12:31:09 cd ..
+ 2098  20/04/17 12:31:09 ls
+ 2099  20/04/17 12:31:33 cd deeplearning/
+ 2100  20/04/17 12:31:33 ls
+ 2101  20/04/17 12:31:35 ls src/
+ 2102  20/04/17 12:31:37 cd src/
+ 2103  20/04/17 12:31:38 ls
+ 2104  20/04/17 12:32:08 cd ..
+ 2105  20/04/17 12:32:09 ls
+ 2106  20/04/17 12:32:10 cd src/
+ 2107  20/04/17 12:32:10 ls
+ 2108  20/04/17 12:39:23 cd ..
+ 2109  20/04/17 12:39:23 ls
+ 2110  20/04/17 12:39:24 cd ..
+ 2111  20/04/17 12:39:25 ls
+ 2112  20/04/17 12:39:28 cd ..
+ 2113  20/04/17 12:39:28 ls
+ 2114  20/04/17 12:39:31 cd ..
+ 2115  20/04/17 12:39:31 ls
+ 2116  20/04/17 12:39:36 cd spotlight/
+ 2117  20/04/17 12:39:36 ls
+ 2118  20/04/17 12:39:37 cd classifier/
+ 2119  20/04/17 12:39:38 ls
+ 2120  20/04/17 12:39:39 cd cnn-text-classification-tf/
+ 2121  20/04/17 12:39:40 ls
+ 2122  20/04/17 12:39:43 vim text_cnn.py 
+ 2123  20/04/17 12:51:14 ls
+ 2124  20/04/17 12:51:15 vim train.py 
+ 2125  20/04/17 12:58:06 ls
+ 2126  20/04/17 13:08:25 cd ~
+ 2127  20/04/17 13:08:25 ls
+ 2128  20/04/17 13:08:29 cd yoyu/fon
+ 2129  20/04/17 13:08:32 cd yoyu/
+ 2130  20/04/17 13:08:32 ls
+ 2131  20/04/17 13:08:34 cd code/fondue/
+ 2132  20/04/17 13:08:34 ls
+ 2133  20/04/17 13:08:38 cd deeplearning/
+ 2134  20/04/17 13:08:39 ls
+ 2135  20/04/17 13:08:40 cd src/
+ 2136  20/04/17 13:08:41 ls
+ 2137  20/04/17 13:08:45 vim lstm.py
+ 2138  20/04/17 13:09:19 pwd
+ 2139  20/04/17 13:09:43 ls
+ 2140  20/04/17 13:09:45 vim lstm.py 
+ 2141  20/04/17 13:13:25 ls
+ 2142  20/04/17 13:20:28 vim lstm.py 
+ 2143  20/04/17 14:32:44 ls
+ 2144  20/04/17 14:36:50 cd ..
+ 2145  20/04/17 14:36:51 ls
+ 2146  20/04/17 14:36:52 cd ..
+ 2147  20/04/17 14:36:53 ls
+ 2148  20/04/17 14:36:57 cd spotlight/
+ 2149  20/04/17 14:36:57 ls
+ 2150  20/04/17 14:36:59 cd opinion/
+ 2151  20/04/17 14:36:59 ls
+ 2152  20/04/17 14:37:01 vim MineOpinionForSPCard.py 
+ 2153  20/04/17 17:47:20 ls
+ 2154  20/04/17 17:47:21 cd ..
+ 2155  20/04/17 17:47:22 ls
+ 2156  20/04/17 17:47:23 cd ..
+ 2157  20/04/17 17:47:23 ls
+ 2158  20/04/17 17:47:25 cd ..
+ 2159  20/04/17 17:47:25 ls
+ 2160  20/04/17 17:47:26 cd ..
+ 2161  20/04/17 17:47:27 ls
+ 2162  20/04/17 17:47:28 cd spotlight/
+ 2163  20/04/17 17:47:28 ls
+ 2164  20/04/17 17:47:58 mkdir models
+ 2165  20/04/17 17:47:59 cd models/
+ 2166  20/04/17 17:47:59 ls
+ 2167  20/04/17 17:48:20 git clone https://github.com/hunkim/word-rnn-tensorflow.git
+ 2168  20/04/17 17:48:28 ls
+ 2169  20/04/17 17:48:29 cd word-rnn-tensorflow/
+ 2170  20/04/17 17:48:30 ls
+ 2171  20/04/17 17:48:37 vim train.py 
+ 2172  20/04/17 18:34:14 python
+ 2173  20/04/17 18:34:47 ls
+ 2174  20/04/17 18:34:57 vim train.py 
+ 2175  20/04/17 20:35:43 ls
+ 2176  20/04/17 20:35:45 cd ..
+ 2177  20/04/17 20:35:45 ls
+ 2178  20/04/17 20:35:46 cd ..
+ 2179  20/04/17 20:35:47 ls
+ 2180  20/04/17 20:35:48 cd classifier/
+ 2181  20/04/17 20:35:49 ls
+ 2182  20/04/17 20:35:51 cd cnn-text-classification-tf/
+ 2183  20/04/17 20:35:51 ls
+ 2184  20/04/17 20:35:54 pwd
+ 2185  20/04/17 20:35:55 ls
+ 2186  20/04/17 20:36:00 vim train.py 
+ 2187  21/04/17 14:46:30 pwd
+ 2188  21/04/17 14:46:32 ls
+ 2189  21/04/17 14:46:46 ls -lh runs/1492600849/checkpoints/ -lh
+ 2190  21/04/17 15:16:40 ls
+ 2191  21/04/17 15:16:41 cd ..
+ 2192  21/04/17 15:16:42 ls
+ 2193  21/04/17 15:16:47 cd ..
+ 2194  21/04/17 15:16:47 ls
+ 2195  21/04/17 15:16:51 cd ..
+ 2196  21/04/17 15:16:52 ls
+ 2197  21/04/17 15:16:53 cd code/
+ 2198  21/04/17 15:16:53 ls
+ 2199  21/04/17 15:16:54 cd fondue/
+ 2200  21/04/17 15:16:55 ls
+ 2201  21/04/17 15:16:58 cd spotlight/
+ 2202  21/04/17 15:16:58 ls
+ 2203  21/04/17 15:16:59 cd opinion/
+ 2204  21/04/17 15:17:00 ls
+ 2205  21/04/17 15:17:02 vim MineOpinionForSPCard.py 
+ 2206  21/04/17 15:19:18 ls
+ 2207  21/04/17 15:19:23 ls models/
+ 2208  21/04/17 15:19:28 ls
+ 2209  21/04/17 15:19:33 ls models/
+ 2210  21/04/17 15:19:40 ls models/emotion/checkpoints/ -ls
+ 2211  21/04/17 15:19:45 ls
+ 2212  21/04/17 15:19:50 zip -r models models
+ 2213  21/04/17 15:19:55 ls
+ 2214  21/04/17 15:24:05 vim MineOpinionForSPCard.py 
+ 2215  21/04/17 15:32:06 ls
+ 2216  21/04/17 15:32:09 vim MineOpinionForSPCard.py 
+ 2217  24/04/17 11:10:25 ls
+ 2218  24/04/17 11:18:30 top 
+ 2219  24/04/17 11:20:11 history | more 
+ 2220  24/04/17 11:20:24 export HISTTIMEFORMAT='%F %T 
+ 2221  24/04/17 11:20:28 export HISTTIMEFORMAT='%F %T '
+ 2222  24/04/17 11:20:31 history | more 
+ 2223  24/04/17 11:25:03 history
+ 2224  24/04/17 11:25:11 history > tmp
+ 2225  24/04/17 11:25:12 vim tmp 
+ 2226  24/04/17 11:37:29 vim ~/.bash_history 
+ 2227  24/04/17 11:39:41 HISTTIMEFORMAT="%d/%m/%y %T "
+ 2228  24/04/17 11:39:48 history > tmp 
+ 2229  24/04/17 11:39:50 vim tmp 
+ 2230  24/04/17 11:40:15 vim ~/.bash_history 
+ 2231  24/04/17 11:42:16 sudo apt-get install msodbcsql
+ 2232  24/04/17 11:43:38 history -a
+ 2233  24/04/17 11:43:43 history > tmp 

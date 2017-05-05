@@ -23,7 +23,7 @@ def process():
     opath = pars["SampleOutput"]
     models = pars["models"]
 
-    sentvocab = "./models/2class/vocab"
+    sentvocab = "./models/3class/vocab"
     emomodel = "./models/emotion"
     vectorfile = "./models/trained-vec.pkl"
 
@@ -71,7 +71,9 @@ def process():
             # sentiment result str
             posrate = "正面:{:.1%}".format(1.0*topic.positive/topic.ttlsentiment)
             negrate = "负面:{:.1%}".format(1.0*topic.negtive/topic.ttlsentiment)
-            sentstr = posrate + "\t" + negrate
+            midrate = "中性:{:.1%}".format(1.0*topic.midsent/topic.ttlsentiment)
+            #sentstr = posrate + "\t" + negrate
+            sentstr = posrate + "　" + midrate + "　" + negrate
             print(sentstr.encode('utf8'))
 
             emostr = ""
