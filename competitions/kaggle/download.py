@@ -10,11 +10,11 @@ def download_and_unzip_data():
     pwd = getpass.getpass("Enter Kaggle password: ")
 
     # The direct link to the Kaggle data set
-    data_urls = ['https://www.kaggle.com/c/titanic/download/gender_submission.csv',
-                 'https://www.kaggle.com/c/titanic/download/test.csv',
-                 'https://www.kaggle.com/c/titanic/download/train.csv'
+    data_urls = ['https://www.kaggle.com/c/digit-recognizer/download/train.csv',
+                 'https://www.kaggle.com/c/digit-recognizer/download/test.csv',
+                 'https://www.kaggle.com/c/digit-recognizer/download/sample_submission.csv'
                  ]
-    cname = 'c001-titanic-mlfrom-disaster'
+    cname = 'c002-mnist'
     
     for data_url in data_urls:
         print('Download %s' % data_url)
