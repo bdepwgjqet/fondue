@@ -13,7 +13,7 @@ import re
 
 def LoadSentence(cfile):
     corpus = []
-    with open(cfile) as f:
+    with open(cfile, "r", encoding="utf8") as f:
         for line in f:
             if not line:
                 continue
@@ -47,6 +47,25 @@ def Predict(contents, vecfile):
         ctfidf.append(sorted_weight)
     return ctfidf
 
+def TfIdf(docfile):
+    docs = LoadSentence(docfile)
+    vectorizer = CountVectorizer()
+    transformer = TfidfTransformer()
+    vec = vectorizer.fit_transform(docs)
+    tfidf = transformer.fit_transform(vec)
+    words = vectorizer.get_feature_names()
+    weight = tfidf.toarray()
+
+    ctfidf = []
+    for i in range(len(weight)):
+        wordweight = dict()
+        for j in range(len(words)):
+            if weight[i][j] > 0:
+                wordweight[words[j]] = weight[i][j]
+        sorted_weight = sorted(wordweight.items(), key=operator.itemgetter(1), reverse=True)
+        ctfidf.append(sorted_weight)
+    return ctfidf
+
 
 def test():
     vectorfile = "trained-vec.pkl"
@@ -55,7 +74,7 @@ def test():
     newcorpus = LoadSentence("test.in")
     ckeys = Predict(newcorpus, vectorfile)
 
-    with open("test.out", "w+") as f:
+    with open("test.out", "w+", encoding="utf8") as f:
         for keys in ckeys:
             f.write('--------------------\n')
             for k,v in keys:
@@ -76,12 +95,16 @@ def process():
     predictfile = pars["PredictFile"]
     runtype = pars["RunType"]
     trainedvec = pars["TrainedVec"]
+    trainingvec = pars["TrainingVec"]
     opath = pars["WordsScore"]
 
     if "train" in runtype:
-        TrainBase(corpusfile, trainedvec)
+        ofile = open(opath, 'w+', encoding="utf8")
+        TrainBase(corpusfile, trainingvec)
+        ofile.write("Success trained vec!")
     elif "predict" in runtype:
         ofile = open(opath, 'w+', encoding="utf8")
+        ovec = open(trainingvec, "w+", encoding="utf8")
         predictcons = LoadSentence(predictfile)
         wweight = Predict(predictcons, trainedvec)
         idx = 0
@@ -89,6 +112,18 @@ def process():
             for k,v in wdic:
                 ofile.write(str(idx) + "\t" + k + "\t" + str(v) + "\n")
             idx = idx + 1
+        ovec.write("Predict words score successed!")
+    elif "realtime" in runtype:
+        ofile = open(opath, 'w+', encoding="utf8")
+        ovec = open(trainingvec, "w+", encoding="utf8")
+        wweight = TfIdf(predictfile)
+
+        idx = 0
+        for wdic in wweight:
+            for k,v in wdic:
+                ofile.write(str(idx) + "\t" + k + "\t" + str(v) + "\n")
+            idx = idx + 1
+        ovec.write("Predict words score successed!")
     else:
         print("Error runtype: " + runtype)
 
