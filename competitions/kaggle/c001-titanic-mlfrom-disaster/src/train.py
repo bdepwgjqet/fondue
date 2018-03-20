@@ -6,6 +6,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC, LinearSVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import Perceptron
+from sklearn.linear_model import SGDClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
 
 train_df = pd.read_csv('../data/train.csv')
 test_df = pd.read_csv('../data/test.csv')
@@ -126,3 +131,51 @@ gaussian.fit(x_train, y_train)
 y_pred = gaussian.predict(x_test)
 acc_gaussian = round(gaussian.score(x_train, y_train)*100, 2)
 print("Gaussian NB Acc: ", acc_gaussian)
+
+# perceptron
+perceptron = Perceptron()
+perceptron.fit(x_train, y_train)
+y_pred = perceptron.predict(x_test)
+acc_perceptron = round(perceptron.score(x_train, y_train)*100, 2)
+print("Perceptron Acc: ", acc_perceptron)
+
+# Linear SVC
+linear_svc = LinearSVC()
+linear_svc.fit(x_train, y_train)
+y_pred = linear_svc.predict(x_test)
+acc_linear_svc = round(linear_svc.score(x_train, y_train)*100, 2)
+print("Linear SVC Acc: ", acc_linear_svc)
+
+# SGD
+sgd = SGDClassifier()
+sgd.fit(x_train, y_train)
+y_pred = sgd.predict(x_test)
+acc_sgd = round(sgd.score(x_train, y_train)*100, 2)
+print("SGD Acc: ", acc_sgd)
+
+# Decision Tree
+decision_tree = DecisionTreeClassifier()
+decision_tree.fit(x_train, y_train)
+y_pred = decision_tree.predict(x_test)
+decision_tree.score(x_train, y_train)
+acc_decision_tree = round(decision_tree.score(x_train, y_train)*100, 2)
+print("Decision tree Acc: ", acc_decision_tree)
+
+# random forest best
+random_forest = RandomForestClassifier(n_estimators=100)
+random_forest.fit(x_train, y_train)
+y_pred = random_forest.predict(x_test)
+acc_random_forest = round(random_forest.score(x_train, y_train)*100, 2)
+print("Random forest Acc: ", acc_random_forest)
+
+# mlp
+mlp = MLPClassifier(alpha=1e-5, early_stopping=False)
+mlp.fit(x_train, y_train)
+y_pred = mlp.predict(x_test)
+acc_mlp = round(mlp.score(x_train, y_train)*100, 2)
+print("MLP Acc: ", acc_mlp)
+
+test_df['Survived'] = pd.Series(y_pred)
+predict_df = test_df[['PassengerId', 'Survived']]
+print(predict_df.head())
+predict_df.to_csv("../data/predict.csv", index=False)
