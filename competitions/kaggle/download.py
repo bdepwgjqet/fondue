@@ -20,15 +20,12 @@ def download_and_unzip_data():
 
     # The direct link to the Kaggle data set
     data_urls = [
-        'https://www.kaggle.com/c/5407/download/sample_submission.csv',
-        'https://www.kaggle.com/c/5407/download/test.csv',
-        'https://www.kaggle.com/c/5407/download/train.csv',
-        'https://www.kaggle.com/c/5407/download/data_description.txt',
-        'https://www.kaggle.com/c/5407/download/sample_submission.csv.gz',
-        'https://www.kaggle.com/c/5407/download/test.csv.gz',
-        'https://www.kaggle.com/c/5407/download/train.csv.gz',
+        'https://www.kaggle.com/c/3971/download/sample_submission.csv',
+        'https://www.kaggle.com/c/3971/download/labeledTrainData.tsv.zip',
+        'https://www.kaggle.com/c/3971/download/testData.tsv.zip',
+        'https://www.kaggle.com/c/3971/download/unlabeledTrainData.tsv.zip',
     ]
-    cname = 'c5407-house-price'
+    cname = 'c3971-bag-of-words-meets-bags-of-popcorn'
     cfolder = os.path.join(os.path.dirname(__file__), cname)
     cfolder = os.path.join(cfolder, 'data')
     ensure_dir(cfolder)
@@ -45,7 +42,7 @@ def download_and_unzip_data():
         r = requests.get(data_url)
 
         # Login to Kaggle and retrieve the data.
-        r = requests.post(r.url, data = kaggle_info)
+        r = requests.post(r.url, data = kaggle_info, prefetch=False)
 
         # Writes the data to a local file one chunk at a time.
         cfile = os.path.join(cfolder, local_filename)
